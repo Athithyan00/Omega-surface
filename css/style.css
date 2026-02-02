@@ -955,7 +955,7 @@ button:hover{
   z-index: 5;
 }
 
-.main_title {
+.main_title_box {
   font-size: 72px;
    color: #ffffff;
   font-weight: 800;
@@ -964,11 +964,11 @@ button:hover{
   letter-spacing: -1px;
 }
 
-.sub_title {
+.sub_title_box {
   color: #f5ca56; /* Accent color for a premium feel */
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight: 600;
+  font-weight: 900;
   display: block;
   margin-bottom: 10px;
 }
