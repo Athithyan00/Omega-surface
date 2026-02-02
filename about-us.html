@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -21,6 +21,24 @@
     <link rel="stylesheet" href="vendors/scroll/jquery.mCustomScrollbar.css" />
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to(".tiles-list", {
+        scrollTrigger: {
+          trigger: ".about-omega-section",
+          start: "top top", // Animation starts when section hits top
+          end: "bottom bottom", // Animation ends at section bottom
+          scrub: 1, // Connects scroll speed to animation speed
+        },
+        scale: 1.5, // Zoom in
+        rotation: 360, // Full rotation
+        ease: "none",
+      });
+    </script>
   </head>
 
   <body id="about">
@@ -209,206 +227,286 @@
 
     <!--================ Banner Area =================-->
     <section class="common_banner_area">
-      <div class="container-fluid">
-        <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-lg-8 header-left">
-            <div class="">
-              <img
-                class="img-fluid w-100"
-                src="img/banner/common-banner.jpg"
-                alt=""
-              />
-            </div>
-          </div>
+      <div class="container-fluid p-0">
+        <div class="banner_content_wrapper">
+          <img
+            class="banner_img"
+            src="img/banner/banner-about.jpg"
+            alt="Premium Floor Tile Collection"
+          />
 
-          <div class="col-lg-4">
-            <div class="header-right">
-              <h1>About Us</h1>
-              <p class="pt-20">
-                If you are looking at blank cassettes on the web, you may be
-                very confused at the difference in price.
-              </p>
-            </div>
-          </div>
-          <div class="page_link">
-            <a href="index.html">Home</a>
-            <a href="about-us.html">About Us</a>
+          <div class="banner_text_overlay">
+            <span class="sub_title"
+              >Luxury Surface Solutions / Italian Inspired</span
+            >
+            <h1 class="main_title">Exquisite<br />Textures</h1>
           </div>
         </div>
       </div>
     </section>
     <!--================End Banner Area =================-->
-
-    <!--================ Start Service Area =================-->
-    <section class="service-area section_gap_top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 col-md-6">
-            <div class="main_title">
-              <h1>
-                We are <span>Loaft</span><br />
-                Top Services That <br />
-                We Offers
-              </h1>
-              <p>
-                If you are looking at blank cassettes on the web, you may be
-                very confused at the difference in price.
-              </p>
-              <img src="img/next.png" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <div class="service-img">
-              <img class="img-fluid" src="img/project/service1.jpg" alt="" />
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <!-- single service -->
-            <div class="single-service">
-              <h4>Our Memorable Story</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <p class="mt">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore.
-              </p>
-            </div>
-            <!-- single service -->
-            <div class="single-service">
-              <h4>Our Memorable Story</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <p class="mt">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore.
-              </p>
-            </div>
-
-            <div class="counter_area" id="project_counter">
-              <!-- single counter -->
-              <div class="single_counter">
-                <div class="thumb">
-                  <img src="img/project/count1.png" alt="" />
-                </div>
-                <div class="info-content">
-                  <h4><span class="counter">1990</span></h4>
-                  <p>Projects done</p>
-                </div>
-              </div>
-              <!-- single counter -->
-              <div class="single_counter">
-                <div class="thumb">
-                  <img src="img/project/count2.png" alt="" />
-                </div>
-                <div class="info-content">
-                  <h4><span class="counter">50</span>+</h4>
-                  <p>Expert Members</p>
-                </div>
-              </div>
-              <!-- single counter -->
-              <div class="single_counter">
-                <div class="thumb">
-                  <img src="img/project/count3.png" alt="" />
-                </div>
-                <div class="info-content">
-                  <h4><span class="counter">25</span>+</h4>
-                  <p>Achievements</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================ End Service Area =================-->
-
-    <!--================ Start Testimonial Area =================-->
-    <section class="testimonial_area section_gap">
-      <div class="container">
+    <!--================About Area =================-->
+    <section class="about-omega-section">
+      <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="col-lg-5">
-            <div class="owl-carousel active_testimonial">
-              <!-- single testi -->
-              <div class="single_testi">
-                <div class="quote">
-                  <img class="img-fluid" src="img/quote.png" alt="" />
-                </div>
-                <div class="testi_content">
-                  <p class="black_text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                  </p>
-                </div>
-                <div class="testi_author">
-                  <div class="thumb">
-                    <img src="img/testi-author.png" alt="" />
-                  </div>
-                  <div class="a-desc">
-                    <h6>Marvel Maison</h6>
-                    <p>Chief Executive, Amazon</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- branding -->
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="owl-carousel brand-carousel">
-                  <!-- single-brand -->
-                  <div class="single-brand-item d-table">
-                    <div class="d-table-cell">
-                      <img src="img/brands/1.png" alt="" />
-                    </div>
-                  </div>
-                  <!-- single-brand -->
-                  <div class="single-brand-item d-table">
-                    <div class="d-table-cell">
-                      <img src="img/brands/2.png" alt="" />
-                    </div>
-                  </div>
-                  <!-- single-brand -->
-                  <div class="single-brand-item d-table">
-                    <div class="d-table-cell">
-                      <img src="img/brands/3.png" alt="" />
-                    </div>
-                  </div>
-                  <!-- single-brand -->
-                  <div class="single-brand-item d-table">
-                    <div class="d-table-cell">
-                      <img src="img/brands/2.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="col-lg-6 sticky-column">
+            <main class="tiles-grid-wrapper">
+              <ul class="tiles-list">
+                <li style="--x1: 2; --x2: 6; --y1: 1; --y2: 4">
+                  <img src="./img/about-7.png" />
+                </li>
+                <li style="--x1: 6; --x2: 8; --y1: 2; --y2: 4">
+                  <img src="./img/about-1.png" />
+                </li>
+                <li style="--x1: 1; --x2: 4; --y1: 4; --y2: 7">
+                  <img src="./img/about-2.png" />
+                </li>
+                <li style="--x1: 4; --x2: 7; --y1: 4; --y2: 7">
+                  <img src="./img/about-3.png" />
+                </li>
+                <li style="--x1: 7; --x2: 9; --y1: 4; --y2: 6">
+                  <img src="./img/about-4.png" />
+                </li>
+                <li style="--x1: 2; --x2: 4; --y1: 7; --y2: 9">
+                  <img src="./img/about-5.png" />
+                </li>
+                <li style="--x1: 4; --x2: 7; --y1: 7; --y2: 10">
+                  <img src="./img/about-6.png" />
+                </li>
+                <li style="--x1: 7; --x2: 10; --y1: 6; --y2: 9">
+                  <img src="./img/image.png" />
+                </li>
+              </ul>
+            </main>
           </div>
-          <div class="col-lg-6 offset-lg-1">
-            <div class="testi_img">
-              <img class="img-fluid" src="img/testi-img.jpg" alt="" />
+
+          <div class="col-lg-6 content-column">
+            <div class="about-content-box">
+              <div class="main_title">
+                <div class="main_title">
+                  <h1>About Our Company <br /><span>Omega Surface</span></h1>
+                  <div class="animated-line"></div>
+                </div>
+              </div>
+              <p>
+                Established in 2019, <strong>Omega Surface</strong> is a trusted
+                and fast-growing tiles brand. We focus on quality, design, and
+                customer satisfaction, delivering the best tile solutions for
+                modern homes.
+              </p>
+
+              <p>
+                We offer a wide collection of 1000+ unique tile designs,
+                carefully curated to match contemporary trends. From elegant
+                wall tiles to durable floor tiles, our products enhance every
+                space.
+              </p>
+
+              <p>
+                At Omega Surface, we believe tiles are an essential element of
+                interior design. Our commitment to excellence has made us a
+                preferred choice for customers, builders, and designers alike.
+              </p>
+              <div class="stats-row">
+                <div class="stat-box">
+                  <strong class="stat-number"
+                    ><span class="counter">2019</span></strong
+                  >
+                  <span class="stat-label">Est. Year</span>
+                </div>
+
+                <div class="stat-box">
+                  <strong class="stat-number"
+                    ><span class="counter">1000</span>+</strong
+                  >
+                  <span class="stat-label">Designs</span>
+                </div>
+
+                <div class="stat-box">
+                  <strong class="stat-number"
+                    ><span class="counter">100</span>%</strong
+                  >
+                  <span class="stat-label">Quality</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!--================End about Area =================-->
 
+    <!--================ Start vision Area =================-->
+    <section class="mission-vision-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <div class="main_title_values">
+              <h1>Our Values & <span>Commitment</span></h1>
+              <div class="animated-line-center"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 mission-box">
+            <div class="mission-vision-card">
+              <div class="corner-icon">
+                <i class="fa fa-rocket"></i>
+                <div class="slide-overlay"></div>
+              </div>
+              <div class="card-text">
+                <span>MISSION</span>
+                <h3>Our Mission</h3>
+                <p>
+                  To provide high-quality, sustainable surface solutions through
+                  superior craftsmanship and innovative tile designs that
+                  transform ordinary spaces into architectural masterpieces.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 vision-box">
+            <div class="mission-vision-card">
+              <div class="corner-icon">
+                <i class="fa fa-eye"></i>
+                <div class="slide-overlay"></div>
+              </div>
+              <div class="card-text">
+                <span>VISION</span>
+                <h3>Our Vision</h3>
+                <p>
+                  To be the global benchmark for luxury and durability in the
+                  ceramic industry, inspiring architects and homeowners with the
+                  perfect blend of artistic elegance and advanced technology.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ End visionArea =================-->
+    <section class="mural-section">
+      <div class="mural-container">
+        <img
+          src="./img/banner-5.jpg"
+          alt="Artistic Mural"
+          class="full-mural-img"
+        />
+      </div>
+
+      <div class="running-text-wrapper">
+        <div class="marquee">
+          <span
+            >LUXURY FLOOR TILES • MODERN WALL DESIGNS • BATHROOM SAFETY TILES •
+            KITCHEN SLAB TILES • 1000+ DESIGNS • STAIN FREE SURFACES • WATER
+            PROOF TILES • NEW ARRIVALS 2026 • EASY TO CLEAN • GLOSSY & MATTE
+            FINISH •
+          </span>
+          <span
+            >LUXURY FLOOR TILES • MODERN WALL DESIGNS • BATHROOM SAFETY TILES •
+            KITCHEN SLAB TILES • 1000+ DESIGNS • STAIN FREE SURFACES • WATER
+            PROOF TILES • NEW ARRIVALS 2026 • EASY TO CLEAN • GLOSSY & MATTE
+            FINISH •
+          </span>
+        </div>
+      </div>
+    </section>
+    <!--================ Start Testimonial Area =================-->
+    <!-- <section class="why-choose-us" id="why-choose-trigger">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <div
+            class="col-lg-4 d-flex align-items-center animate-box"
+            style="padding: 80px 60px; background: #fdfdfd"
+          >
+            <div class="wcu-left">
+              <span class="section-tag">04 / Excellence</span>
+              <h2
+                style="
+                  font-size: 55px;
+                  font-weight: 900;
+                  line-height: 1.1;
+                  color: #1a1a1a;
+                "
+              >
+                Why Choose<br /><span style="color: #888">Omega Surface?</span>
+              </h2>
+              <p style="font-size: 18px; margin-top: 25px; color: #555">
+                Transforming spaces with durability and Italian-inspired designs
+                since 2019.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="wcu-bento-grid">
+              <div class="grid-item-new green-card span-height animate-box">
+                <div class="icon-top">
+                  <i class="fa fa-diamond" style="font-size: 30px"></i>
+                </div>
+                <p
+                  class="quote"
+                  style="font-size: 24px; font-weight: 600; margin-top: 20px"
+                >
+                  "Unmatched scratch resistance and mirror-like finish for your
+                  floors."
+                </p>
+                <div class="stats" style="margin-top: auto">
+                  <h3 style="font-size: 60px; letter-spacing: -2px">100%</h3>
+                  <span
+                    style="
+                      text-transform: uppercase;
+                      font-size: 12px;
+                      font-weight: 700;
+                    "
+                    >Premium Quality Check</span
+                  >
+                </div>
+              </div>
+
+              <div class="grid-item-new img-card-new animate-box">
+                <div class="img-overlay-text">TEXTURE REVEAL</div>
+                <img src="./img/image.png" alt="Tile Texture" />
+              </div>
+
+              <div class="grid-item-new white-card-new animate-box">
+                <h3 style="font-size: 50px; color: #1a1a1a">1000+</h3>
+                <span style="color: #777; font-weight: 600"
+                  >Modern Designs</span
+                >
+              </div>
+
+              <div class="grid-item-new dark-card animate-box">
+                <h3 style="font-size: 50px">24/7</h3>
+                <p style="color: #aaa">
+                  Expert consultation for your home interior
+                </p>
+              </div>
+
+              <div class="grid-item-new glass-card animate-box">
+                <h4 style="font-size: 30px; font-weight: 800">
+                  Built to Last.
+                </h4>
+                <p
+                  style="
+                    font-size: 16px;
+                    margin-top: 10px;
+                    color: #444;
+                    max-width: 450px;
+                  "
+                >
+                  Our tiles are water-proof and heat-resistant, making them
+                  perfect for both indoor luxury and outdoor toughness.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
     <!--================ End Testimonial Area =================-->
 
     <!--================ start footer Area  =================-->
@@ -512,5 +610,57 @@
     <script src="vendors/swiper/js/swiper.min.js"></script>
     <script src="vendors/scroll/jquery.mCustomScrollbar.js"></script>
     <script src="js/theme.js"></script>
+
+    <script>
+      window.addEventListener("load", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Create a timeline for better control
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".about-omega-section",
+            start: "top top", // Starts when section hits the top
+            end: "+=1500", // Duration of the "pin" (scrolling distance)
+            scrub: 1,
+            pin: true,
+            anticipatePin: 1,
+          },
+        });
+
+        tl.to(".tiles-list", {
+          scale: 1,
+          rotation: 180,
+          ease: "none",
+        });
+      });
+
+      // About Company Underline Animation
+      gsap.to(".animated-line", {
+        scrollTrigger: {
+          trigger: ".about-omega-section",
+          start: "top 80%", // Section screen-oda 80%-ku varumpodhu start aagum
+          end: "top 20%", // Mela poga poga increase aagum
+          scrub: 1, // Scroll-ku thagundhappadi increase/decrease aagum
+        },
+        width: "100%", // Final width
+        ease: "none",
+      });
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Cards mela irunthu keezha varum (Top to Down)
+      gsap.from(".animate-box", {
+        scrollTrigger: {
+          trigger: "#why-choose-trigger",
+          start: "top 75%", // Konjam munnadiye trigger aagum
+          toggleActions: "play none none reverse", // Scroll back pannuna thirumba animate aagum
+        },
+        y: -100, // Mela irunthu vizhum
+        opacity: 0, // Start zero-la irunthu start aagum
+        duration: 1.2,
+        stagger: 0.2, // One by one ah varum
+        ease: "power3.out",
+      });
+    </script>
   </body>
 </html>
