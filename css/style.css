@@ -956,7 +956,7 @@ button:hover{
 }
 
 .main_title_box {
-  font-size: 72px;
+  font-size: 62px;
    color: #ffffff;
   font-weight: 800;
   line-height: 1;
@@ -965,14 +965,15 @@ button:hover{
 }
 
 .sub_title_box {
-  color: #f5ca56; /* Accent color for a premium feel */
+  color: #f5ca56;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight: 900;
-  display: block;
+  font-weight: 600 !important; 
+  display: inline-block; 
   margin-bottom: 10px;
+  -webkit-text-stroke: 0.5px #f5ca56; 
+  font-size: 30px;
 }
-
 /* Glassmorphism Stats Bar */
 .stats_bar {
   position: absolute;
@@ -4792,69 +4793,99 @@ h6 {
 }
 
 /* -- emd- Mural Section --- */
-.wcu-bento-grid {
-    display: grid;
-    /* 3 columns */
-    grid-template-columns: 1.2fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    
-    /* GAPS INGA THAAN ADD PANNANUM */
-    grid-gap: 25px; 
-    
-    /* Section-oda border remove panni padding add pannunga */
-    border-top: none; 
-    padding: 50px 0; /* Top and bottom spacing for the whole grid */
+/* Add a clean font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+.why-choose-us {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #fff;
+    padding: 100px 0;
 }
 
-.grid-item-new {
+.container-custom {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.bento-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start; /* Aligns text to top */
+}
+
+.content-side { flex: 0.8; }
+
+.tag {
+    background: #1a1a1a;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.main-title {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 30px 0;
+    letter-spacing: -2px;
+    color: #1a1a1a;
+}
+
+.description {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+/* GRID LOGIC */
+.wcu-bento-grid {
+    flex: 2;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr; /* Exact proportions */
+    grid-template-rows: 220px 220px;
+    gap: 20px;
+}
+
+.grid-item {
+    border-radius: 24px; /* Smoother corners */
     padding: 30px;
-    /* Gaps irukkuradhala border-right/bottom thevai illai, clean-ah irukkum */
-    border: 1px solid #f0f0f0; 
-    border-radius: 15px; /* Tiles business-ku rounded corners premium-ah irukkum */
     display: flex;
     flex-direction: column;
-    background: #fff;
-    transition: all 0.3s ease;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
-/* Satisfaction Card spans 2 rows */
-.green-card.span-height {
+.grid-item:hover { transform: translateY(-5px); }
+
+/* Card Specifics */
+.green-card {
     grid-row: span 2;
-    background: #ffba00 !important;
-    /* Margin-bottom thevai illai, grid-gap pathukkum. 
-       But ungaluku extra space venumna use pannunga */
-    margin-bottom: 0; 
-    border: none;
+    background-color: #ffba00; /* The exact lime green */
+    justify-content: space-between;
 }
 
-/* Image box styling */
-.img-card-new {
-    padding: 0 !important;
-    overflow: hidden;
-    border-radius: 15px;
-}
+.stars { color: #1a1a1a; font-size: 18px; letter-spacing: 2px; }
+.quote { font-size: 20px; font-weight: 600; margin: 20px 0; color: #1a1a1a; }
 
-.img-card-new img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
+.user-info { display: flex; align-items: center; gap: 12px; margin-top: 20px; }
+.avatar { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; }
 
-/* Hover Effect (Optional but looks great with gaps) */
-.grid-item-new:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
+.img-card { background: #f0f0f0; padding: 0; }
+.img-card img { width: 100%; height: 100%; object-fit: cover; border-radius: 24px; }
 
-/* Mobile Responsiveness update */
-@media (max-width: 991px) {
-    .wcu-bento-grid {
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
-        padding: 20px;
-    }
-    .green-card.span-height {
-        grid-row: auto;
-    }
+.white-card { background: #f9f9f9; border: 1px solid #eee; }
+.dark-card { background: #1a1a1a; color: white; }
+.studio-card { background: #fff; border: 1px solid #f0f0f0; grid-column: span 1; }
+
+.brand-title { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
+.stat-num { font-size: 48px; font-weight: 800; letter-spacing: -1px; }
+
+@media (max-width: 1100px) {
+    .bento-wrapper { flex-direction: column; }
+    .wcu-bento-grid { width: 100%; }
 }
