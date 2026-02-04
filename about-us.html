@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="vendors/popup/magnific-popup.css" />
     <link rel="stylesheet" href="vendors/swiper/css/swiper.min.css" />
     <link rel="stylesheet" href="vendors/scroll/jquery.mCustomScrollbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -42,6 +46,7 @@
   </head>
 
   <body id="about">
+    <!-- ===== Desktop Header Only ===== -->
     <header class="desktop-header d-none d-lg-block">
       <div class="container">
         <div class="d-flex align-items-center justify-content-between">
@@ -62,21 +67,12 @@
                 </ul>
               </li>
 
-              <li><a href="service.html">Service</a></li>
-
               <li class="menu-has-children">
-                <a href="#">Pages</a>
-                <ul class="list">
-                  <li><a href="elements.html">Elements</a></li>
-                </ul>
+                <a href="blog.html">Gallery</a>
               </li>
 
               <li class="menu-has-children">
-                <a href="#">Blog</a>
-                <ul class="list">
-                  <li><a href="blog.html">Blog</a></li>
-                  <li><a href="single-blog.html">Blog Details</a></li>
-                </ul>
+                <a href="blog.html">Blog</a>
               </li>
 
               <li><a href="contact.html">Contact</a></li>
@@ -107,26 +103,10 @@
           </ul>
         </li>
         <li>
-          <a href="service.html">Service</a>
+          <a href="blog.html">Gallery</a>
         </li>
         <li>
-          <a href="#">Pages</a>
-          <ul class="list">
-            <li>
-              <a href="elements.html">Elements</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Blog</a>
-          <ul class="list">
-            <li>
-              <a href="blog.html">Blog</a>
-            </li>
-            <li>
-              <a href="single-blog.html">Blog Details</a>
-            </li>
-          </ul>
+          <a href="blog.html">Blog</a>
         </li>
         <li>
           <a href="contact.html">Contact</a>
@@ -342,7 +322,7 @@
         <div class="row justify-content-center mb-5">
           <div class="col-lg-8 text-center">
             <div class="main_title_values">
-              <h1>Our Values & <span>Commitment</span></h1>
+              <h1>Mission & <span>Vision</span></h1>
               <div class="animated-line-center"></div>
             </div>
           </div>
@@ -388,10 +368,12 @@
       </div>
     </section>
     <!--================ End visionArea =================-->
+    <!--================ banner=================-->
+
     <section class="mural-section">
       <div class="mural-container">
         <img
-          src="./img/banner-5.jpg"
+          src="./img/banner.jpg"
           alt="Artistic Mural"
           class="full-mural-img"
         />
@@ -414,12 +396,15 @@
         </div>
       </div>
     </section>
-    <!--================ Start Testimonial Area =================-->
+    <!--================ End =================-->
+
+    <!--================ why choose us =================-->
+
     <section class="why-choose-us">
       <div class="container-custom">
         <div class="bento-wrapper">
-          <div class="content-side">
-            <h2 class="main-title">Why choose us</h2>
+          <div class="content-side animate-up">
+            <h2 class="style-whychose">Why choose us</h2>
             <p class="description">
               We blend creativity with strategy to craft unique digital
               experiences that make an impact. With a focus on innovation,
@@ -428,7 +413,10 @@
           </div>
 
           <div class="wcu-bento-grid">
-            <div class="grid-item green-card">
+            <div
+              class="grid-item green-card animate-left"
+              style="transition-delay: 0.1s"
+            >
               <div class="stars">★★★★★</div>
               <p class="quote">
                 The team exceeded our expectations with a stunning brand
@@ -439,43 +427,234 @@
                 <span class="stat-label">Customer satisfaction</span>
               </div>
               <div class="tile-badge">
-                <div class="badge-icon">
-                  <i class="fa fa-shield"></i>
-                </div>
+                <div class="badge-icon"><i class="fa fa-shield"></i></div>
                 <div>
-                  <strong>Durability Guaranteed</strong><br />
-                  <small>Certified High-Gloss Tiles</small>
+                  <strong>Durability</strong><br /><small
+                    >Certified Finish</small
+                  >
                 </div>
               </div>
             </div>
 
-            <div class="grid-item img-card">
-              <img src="./img/about-3.png" alt="Tile" />
+            <div
+              class="grid-item img-card animate-left"
+              style="transition-delay: 0.2s"
+            >
+              <img src="./img/about-3.png" alt="Tile Surface" />
             </div>
 
-            <div class="grid-item white-card">
+            <div class="grid-item white-card animate-left delay-3">
               <h3 class="stat-num">238+</h3>
               <span class="stat-label">Brands served worldwide</span>
+
+              <a href="project.html" class="stat-btn"> View Projects </a>
             </div>
 
-            <div class="grid-item dark-card">
-              <h3 class="stat-num">500+</h3>
-              <span class="stat-label">Successful projects</span>
-              <div class="avatars-row"></div>
+            <div
+              class="grid-item dark-card animate-left"
+              style="transition-delay: 0.4s"
+            >
+              <h3 class="stat-num-box">500+</h3>
+              <span class="stat-label-box">Successful projects</span>
             </div>
 
-            <div class="grid-item studio-card">
+            <div
+              class="grid-item studio-card animate-left"
+              style="transition-delay: 0.5s"
+            >
               <h3 class="brand-title">Omega</h3>
-              <p>
+              <p style="font-size: 14px; color: #666">
                 Our global reach allows us to create unique, culturally relevant
-                designs for businesses.
+                designs.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!--================ End Testimonial Area =================-->
+
+    <!--================ End why chooseus=================-->
+    <!--================ values=================-->
+    <section class="values-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our <span>Values</span></h2>
+          <p>The foundation behind Omega Surface</p>
+        </div>
+
+        <div class="values-grid" id="valuesGrid">
+          <div class="value-card omega-reveal">
+            <span class="value-index">01</span>
+            <h4>Quality & Trust</h4>
+            <p>
+              Every Omega Surface tile is crafted with premium materials and
+              strict quality control to deliver long-lasting beauty.
+            </p>
+          </div>
+
+          <div class="value-card omega-reveal">
+            <span class="value-index">02</span>
+            <h4>Design Excellence</h4>
+            <p>
+              With 1000+ modern designs, we continuously innovate to match
+              evolving interior and architectural trends.
+            </p>
+          </div>
+
+          <div class="value-card omega-reveal">
+            <span class="value-index">03</span>
+            <h4>Commitment & Reliability</h4>
+            <p>
+              From production to delivery, our perseverance ensures consistency,
+              durability, and customer satisfaction.
+            </p>
+          </div>
+
+          <div class="value-card omega-reveal">
+            <span class="value-index">04</span>
+            <h4>Future-Focused Innovation</h4>
+            <p>
+              We anticipate future needs and trends to design tiles that remain
+              relevant, functional, and timeless.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--================ values=================-->
+    <!--================cal to action =================-->
+
+    <section class="omega-cta-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 animate-box">
+            <span class="sub_title_box" style="color: #f5ca56"
+              >Expert Consultation</span
+            >
+            <h2 class="cta-title">Upgrade Your Floors: <br />Expert Advice</h2>
+            <p class="cta-desc">
+              Not sure which tile suits your space? Our experts help you choose
+              the perfect finish for your home.
+            </p>
+          </div>
+
+          <div class="col-lg-5 offset-lg-1 animate-box">
+            <div class="cta-form-card">
+              <button
+                type="button"
+                onclick="window.location.href = 'contact.html'"
+                class="cta-btn-submit"
+              >
+                GET FREE ESTIMATE NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ cal to action=================-->
+    <!--================ technical feature=================-->
+    <section class="omega-tech-features-section py-5">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center animate-box">
+            <span class="sub_title_box">Technical Excellence</span>
+            <h2 class="omega-tech-main-title">Surface Science Redefined</h2>
+            <p class="omega-tech-section-desc">
+              From fire resistance to zero water absorption, discover the
+              advanced technology built into every Omega tile.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="omega-tech-card animate-box">
+              <img
+                src="img/water.png"
+                alt="100% Waterproof"
+                class="omega-tech-img"
+              />
+              <div class="omega-tech-overlay">
+                <div class="omega-tech-tag">
+                  <i class="fas fa-tint"></i>
+                  <span>WATERPROOF</span>
+                </div>
+                <div class="omega-tech-desc">
+                  <p>
+                    Advanced nano-coating ensures zero water penetration,
+                    perfect for bathrooms and kitchens.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="omega-tech-card animate-box">
+              <img
+                src="img/scratch.png"
+                alt="Scratch Resistant"
+                class="omega-tech-img"
+              />
+              <div class="omega-tech-overlay">
+                <div class="omega-tech-tag">
+                  <i class="fas fa-shield-alt"></i>
+                  <span>SCRATCH RESISTANT</span>
+                </div>
+                <div class="omega-tech-desc">
+                  <p>
+                    Tough diamond-core surface stays flawless even under heavy
+                    furniture and foot traffic.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="omega-tech-card animate-box">
+              <img
+                src="img/chemical.png"
+                alt="Chemical Resistant"
+                class="omega-tech-img"
+              />
+              <div class="omega-tech-overlay">
+                <div class="omega-tech-tag">
+                  <i class="fas fa-vial"></i> <span>CHEMICAL RESISTANT</span>
+                </div>
+                <div class="omega-tech-desc">
+                  <p>
+                    Resistant to harsh household cleaners, acids, and stubborn
+                    food or oil stains.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="omega-tech-card animate-box">
+              <img src="img/fire.png" alt="Fireproof" class="omega-tech-img" />
+              <div class="omega-tech-overlay">
+                <div class="omega-tech-tag">
+                  <i class="fas fa-fire"></i>
+                  <span>FIREPROOF</span>
+                </div>
+                <div class="omega-tech-desc">
+                  <p>
+                    Non-combustible materials that provide a safe,
+                    fire-resistant environment for your home.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ end techinal feature=================-->
 
     <!--================ start footer Area  =================-->
     <footer class="footer_area section_gap">
@@ -582,13 +761,11 @@
     <script>
       window.addEventListener("load", function () {
         gsap.registerPlugin(ScrollTrigger);
-
-        // Create a timeline for better control
         let tl = gsap.timeline({
           scrollTrigger: {
             trigger: ".about-omega-section",
-            start: "top top", // Starts when section hits the top
-            end: "+=1500", // Duration of the "pin" (scrolling distance)
+            start: "top top",
+            end: "+=1500",
             scrub: 1,
             pin: true,
             anticipatePin: 1,
@@ -601,33 +778,73 @@
           ease: "none",
         });
       });
-
-      // About Company Underline Animation
       gsap.to(".animated-line", {
         scrollTrigger: {
           trigger: ".about-omega-section",
-          start: "top 80%", // Section screen-oda 80%-ku varumpodhu start aagum
-          end: "top 20%", // Mela poga poga increase aagum
-          scrub: 1, // Scroll-ku thagundhappadi increase/decrease aagum
+          start: "top 80%",
+          end: "top 20%",
+          scrub: 1,
         },
-        width: "100%", // Final width
+        width: "100%",
         ease: "none",
       });
 
       gsap.registerPlugin(ScrollTrigger);
 
-      // Cards mela irunthu keezha varum (Top to Down)
       gsap.from(".animate-box", {
         scrollTrigger: {
           trigger: "#why-choose-trigger",
-          start: "top 75%", // Konjam munnadiye trigger aagum
-          toggleActions: "play none none reverse", // Scroll back pannuna thirumba animate aagum
+          start: "top 75%",
+          toggleActions: "play none none reverse",
         },
-        y: -100, // Mela irunthu vizhum
-        opacity: 0, // Start zero-la irunthu start aagum
+        y: -100,
+        opacity: 0,
         duration: 1.2,
-        stagger: 0.2, // One by one ah varum
+        stagger: 0.2,
         ease: "power3.out",
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const observerOptions = {
+          threshold: 0.15,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("appear");
+            }
+          });
+        }, observerOptions);
+        const elements = document.querySelectorAll(
+          ".animate-up, .animate-left",
+        );
+        elements.forEach((el) => observer.observe(el));
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const observerOptions = {
+          threshold: 0.2, // 20% section theriyumbodhu trigger aagum
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Ellaa cards-kum active class add pannum
+              entry.target.querySelectorAll(".omega-reveal").forEach((card) => {
+                card.classList.add("active");
+              });
+            }
+          });
+        }, observerOptions);
+
+        // Section-ah observe pannuvom
+        const valuesSection = document.querySelector(".values-section");
+        if (valuesSection) {
+          observer.observe(valuesSection);
+        }
       });
     </script>
   </body>
