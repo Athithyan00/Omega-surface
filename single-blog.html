@@ -21,94 +21,7 @@
     <link rel="stylesheet" href="vendors/scroll/jquery.mCustomScrollbar.css" />
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      /* Blog Structure */
-      .blog-title {
-        font-size: 42px;
-        font-weight: 600;
-        letter-spacing: -0.5px;
-      }
-
-      .blog-subtitle {
-        font-size: 16px;
-        color: #777;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-
-      .blog-hero img {
-        border-radius: 6px;
-        height: 500px;
-      }
-
-      /* Content */
-      .blog-content {
-        font-size: 16px;
-        line-height: 1.9;
-        color: #444;
-      }
-
-      .blog-content h3 {
-        margin-top: 40px;
-        font-weight: 600;
-      }
-
-      .blog-content .lead {
-        font-size: 18px;
-        font-weight: 400;
-        color: #333;
-      }
-
-      /* Quote */
-      .blog-quote {
-        margin: 50px 0;
-        padding: 25px 30px;
-        background: #f7f7f7;
-        border-left: 4px solid #000;
-        font-style: italic;
-      }
-      .blog-point-content {
-        font-size: 17px;
-        line-height: 1.9;
-      }
-
-      .blog-points {
-        padding-left: 18px;
-        margin-top: 15px;
-      }
-
-      .blog-points li {
-        margin-bottom: 10px;
-        color: #444;
-      }
-
-      .blog-inline-img {
-        border-radius: 6px;
-        max-height: 340px;
-        object-fit: cover;
-      }
-      .luxury-points {
-        list-style: none;
-        padding-left: 0;
-        margin-top: 18px;
-      }
-
-      .luxury-points li {
-        display: flex;
-        align-items: flex-start;
-        gap: 14px;
-        margin-bottom: 14px;
-        font-size: 17px;
-        line-height: 1.8;
-        color: #2b2b2b;
-      }
-
-      .luxury-points i {
-        color: rgb(245, 202, 86); /* luxury champagne gold */
-        font-size: 12px;
-        margin-top: 8px;
-      }
-    </style>
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -117,6 +30,7 @@
   </head>
 
   <body id="about">
+    <!-- ===== Desktop Header Only ===== -->
     <header class="desktop-header d-none d-lg-block">
       <div class="container">
         <div class="d-flex align-items-center justify-content-between">
@@ -137,7 +51,9 @@
                 </ul>
               </li>
 
-              <li><a href="service.html">Service</a></li>
+              <li class="menu-has-children">
+                <a href="blog.html">Gallery</a>
+              </li>
 
               <li class="menu-has-children">
                 <a href="blog.html">Blog</a>
@@ -149,6 +65,7 @@
         </div>
       </div>
     </header>
+
     <!-- ================Offcanvus Menu Area =================-->
     <div class="side_menu">
       <ul class="list menu_right">
@@ -170,26 +87,10 @@
           </ul>
         </li>
         <li>
-          <a href="service.html">Service</a>
+          <a href="blog.html">Gallery</a>
         </li>
         <li>
-          <a href="#">Pages</a>
-          <ul class="list">
-            <li>
-              <a href="elements.html">Elements</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Blog</a>
-          <ul class="list">
-            <li>
-              <a href="blog.html">Blog</a>
-            </li>
-            <li>
-              <a href="single-blog.html">Blog Details</a>
-            </li>
-          </ul>
+          <a href="blog.html">Blog</a>
         </li>
         <li>
           <a href="contact.html">Contact</a>
@@ -321,7 +222,7 @@
 
     <!--================Blog Area =================-->
     <!--================ Modern Blog Area =================-->
-    <section class="blog_area" style="padding-top: 20px;">
+    <section class="blog_area" style="padding-top: 20px">
       <div class="container">
         <!-- Article Wrapper -->
         <article class="row justify-content-center">
