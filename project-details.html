@@ -38,11 +38,7 @@
               <li><a href="about-us.html">About</a></li>
 
               <li class="menu-has-children">
-                <a href="#">Works</a>
-                <ul class="list">
-                  <li><a href="project.html">Project</a></li>
-                  <li><a href="project-details.html">Project Details</a></li>
-                </ul>
+                <a href="project.html">Product</a>
               </li>
 
               <li class="menu-has-children">
@@ -70,15 +66,7 @@
           <a href="about-us.html">About</a>
         </li>
         <li>
-          <a href="#">Works</a>
-          <ul class="list">
-            <li>
-              <a href="project.html">Project</a>
-            </li>
-            <li>
-              <a href="project-details.html">Project Details</a>
-            </li>
-          </ul>
+          <a href="project.html">Product</a>
         </li>
         <li>
           <a href="blog.html">Gallery</a>
@@ -184,168 +172,293 @@
     <!--================End Canvus Menu Area =================-->
 
     <!--================ Banner Area =================-->
+
+    <style>
+      /* Professional Theme Overrides */
+      :root {
+        --primary-gold: #f5ca56;
+        --dark-bg: #1a1a1a;
+        --text-gray: #666;
+        --soft-white: #f9f9f9;
+      }
+
+      /* Hero Section Styling */
+      .common_banner_area {
+        background: var(--dark-bg);
+        padding: 100px 0;
+        color: #fff;
+        overflow: hidden;
+      }
+
+      .header-right h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary-gold);
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+      }
+
+      .header-right p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #ccc;
+      }
+
+      /* Product Content Grid */
+      .section_gap {
+        padding: 80px 0;
+      }
+
+      #productTitle {
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+      }
+
+      #productTitle::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 4px;
+        background: var(--primary-gold);
+        margin-top: 10px;
+      }
+
+      #productIntro {
+        /* font-size: 1.2rem; */
+        color: var(--text-gray);
+      }
+
+      /* Info Box Grid */
+      .product-info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .info-box {
+        background: #fff;
+        padding: 35px;
+        border-radius: 4px; /* Professional sharp edges or slight round */
+        border: 1px solid #eee;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        position: relative;
+      }
+
+      .info-box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        border-color: var(--primary-gold);
+      }
+
+      .info-box h4 {
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #111;
+      }
+
+      .custom-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .custom-list li {
+        padding-left: 25px;
+        margin-bottom: 12px;
+        position: relative;
+        color: #444;
+      }
+
+      .custom-list li::before {
+        content: "\f0da"; /* FontAwesome Arrow */
+        font-family: FontAwesome;
+        position: absolute;
+        left: 0;
+        color: var(--primary-gold);
+      }
+
+      .info-text {
+        font-size: 16px;
+        color: #555;
+        font-weight: 500;
+      }
+
+      /* Animation classes */
+      .reveal {
+        animation: revealUp 0.8s ease forwards;
+      }
+
+      .product-gallery img {
+        width: 100%;
+        border-radius: 6px;
+        transition:
+          transform 0.4s ease,
+          box-shadow 0.4s ease;
+      }
+
+      .product-gallery .gallery-item {
+        overflow: hidden;
+      }
+
+      .product-gallery img:hover {
+        transform: scale(1.08);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Uniform Gallery Images */
+      .product-gallery .gallery-item {
+        height: 260px; /* same height for all */
+        overflow: hidden;
+        border-radius: 6px;
+      }
+
+      .product-gallery .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* crop nicely without distortion */
+        display: block;
+      }
+
+      @keyframes revealUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .product-info-grid {
+          grid-template-columns: 1fr;
+        }
+        .header-right h1 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+    <!--================End Banner Area =================-->
     <section class="common_banner_area">
-      <div class="container-fluid">
-        <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-lg-8 header-left">
-            <div class="">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <div class="reveal">
               <img
-                class="img-fluid w-100"
-                src="img/banner/common-banner.jpg"
-                alt=""
+                id="mainProductImg"
+                class="img-fluid rounded shadow-lg"
+                src="img/product/default.png"
+                alt="Product Image"
               />
             </div>
           </div>
-
-          <div class="header-right col-lg-4">
-            <h1>Project Details</h1>
-            <p class="pt-20">
-              If you are looking at blank cassettes on the web, you may be very
-              confused at the difference in price.
+          <div class="col-lg-5 header-right">
+            <h1 id="bannerTitle">Catalogue</h1>
+            <p id="bannerDesc">
+              High-performance surface solutions for modern architecture and
+              sustainable design.
             </p>
-          </div>
-          <div class="page_link">
-            <a href="index.html">Home</a>
-            <a href="#">Work</a>
-            <a href="project.html">Project Details</a>
+            <a
+              href="https://wa.me/919843069220"
+              target="_blank"
+              class="btn btn-outline-warning mt-4 px-4 py-2"
+            >
+              Inquire Now
+            </a>
           </div>
         </div>
       </div>
     </section>
-    <!--================End Banner Area =================-->
 
-    <!--================ Start Service Area =================-->
-    <section class="service-area section_gap">
+    <section class="section_gap">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <div class="service-img">
-              <img class="img-fluid" src="img/project/service1.jpg" alt="" />
-            </div>
-          </div>
-          <div class="col-lg-5 offset-lg-1 col-md-6">
-            <!-- single service -->
-            <div class="single-service">
-              <h4>Our Memorable Story</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <p class="mt">
-                Voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum. Sed ut
-                perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                voluptatem.
-              </p>
-
-              <ul class="list">
-                <li>
-                  <span>Rating</span>: <i class="fa fa-star"></i
-                  ><i class="fa fa-star"></i><i class="fa fa-star"></i
-                  ><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                </li>
-                <li><span>Client</span>: Envato</li>
-                <li><span>Website</span>: Themeforest.net</li>
-                <li><span>Completed</span>: 17th Nov, 2018</li>
-              </ul>
-              <ul class="list social_details">
-                <li>
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-behance"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-dribbble"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                </li>
-              </ul>
+          <div class="col-lg-10 mx-auto">
+            <h2 id="productTitle">Product Details</h2>
+            <p id="productIntro"></p>
+            <div id="productContent"></div>
+            <!-- Product Gallery -->
+            <div class="product-gallery mt-5">
+              <h4 class="mb-4">Related images</h4>
+              <div class="row" id="productGallery"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!--================ End Service Area =================-->
 
     <!--================ start footer Area  =================-->
-    <footer class="footer_area section_gap">
+    <footer class="footer_area omega_footer section_gap">
       <div class="container">
         <div class="row footer_inner">
-          <div class="col-lg-5 col-sm-6">
+          <div class="col-lg-3 col-sm-6">
             <aside class="f_widget ab_widget">
               <div class="f_title">
-                <h3>About Me</h3>
+                <h3>Omega</h3>
               </div>
               <p>
-                Do you want to be even more successful? Learn to love learning
-                and growth. The more effort you put into improving your skills,
+                Omega provides top-tier creative solutions and innovative growth
+                strategies.
               </p>
-              <p>
-                Copyright &copy;
+              <p class="copyright">
+                Copyright @2026 &copy;
                 <script>
                   document.write(new Date().getFullYear());
                 </script>
-                All rights reserved |
-                <a href="https://www.paletteproduction.com/" target="_blank">
-                  Palette Production
-                </a>
+                OmegaSurface|Developed by paletteproduction
               </p>
             </aside>
           </div>
-          <div class="col-lg-5 col-sm-6">
-            <aside class="f_widget news_widget">
+
+          <div class="col-lg-2 col-sm-6">
+            <aside class="f_widget link_widget">
               <div class="f_title">
-                <h3>Newsletter</h3>
+                <h3>Quick Links</h3>
               </div>
-              <p>Stay updated with our latest trends</p>
-              <div id="mc_embed_signup">
-                <form
-                  target="_blank"
-                  action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                  method="get"
-                  class="subscribe_form relative"
-                >
-                  <div class="input-group d-flex flex-row">
-                    <input
-                      name="EMAIL"
-                      placeholder="Enter email address"
-                      onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Email Address '"
-                      required=""
-                      type="email"
-                    />
-                    <button class="btn sub-btn">
-                      <span class="lnr lnr-arrow-right"></span>
-                    </button>
-                  </div>
-                  <div class="mt-10 info"></div>
-                </form>
+              <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </aside>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <aside class="f_widget gallery_widget">
+              <div class="f_title">
+                <h3>Gallery</h3>
+              </div>
+              <div class="insta_feed">
+                <div class="gallery_item">
+                  <img src="./img/about-4.png" alt="Gallery 1" />
+                </div>
+                <div class="gallery_item">
+                  <img src="img/about-7.png" alt="Gallery 2" />
+                </div>
+                <div class="gallery_item">
+                  <img src="img/about-3.png" alt="Gallery 3" />
+                </div>
+                <div class="gallery_item">
+                  <img src="img/about-2.png" alt="Gallery 4" />
+                </div>
               </div>
             </aside>
           </div>
-          <div class="col-lg-2">
+
+          <div class="col-lg-3">
             <aside class="f_widget social_widget">
               <div class="f_title">
-                <h3>Follow Me</h3>
+                <h3>Follow Us</h3>
               </div>
-              <p>Let us be social</p>
-              <ul class="list">
+              <ul class="list social_icons">
                 <li>
                   <a href="#"><i class="fa fa-facebook"></i></a>
                 </li>
@@ -353,10 +466,10 @@
                   <a href="#"><i class="fa fa-twitter"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-behance"></i></a>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
                 </li>
               </ul>
             </aside>
@@ -384,5 +497,279 @@
     <script src="vendors/swiper/js/swiper.min.js"></script>
     <script src="vendors/scroll/jquery.mCustomScrollbar.js"></script>
     <script src="js/theme.js"></script>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      const data = {
+        parking: {
+          title: "Heavy-Duty Parking Tiles",
+          bannerTitle: "Parking Series",
+          image: "img/product/parking-tiles.png",
+          intro: `
+           Designed to support heavy vehicle loads and continuous traffic movement, these car parking tiles ensure reliable performance in demanding environments. The R11 anti-skid surface provides excellent grip in both wet and dry conditions, enhancing safety for vehicles and pedestrians. With high resistance to abrasion, impact, and surface wear, the tiles maintain their strength and appearance over time. Their weather- and stain-resistant finish makes them ideal for outdoor parking areas exposed to rain, heat, and oil spills. Low-maintenance construction ensures long-lasting color stability and structural integrity with minimal upkeep.
+           `,
+          content: `
+              <div class="product-info-grid">
+                <div class="info-box reveal">
+                  <h4>Applications</h4>
+                  <ul class="custom-list">
+                    <li>Commercial Driveways</li>
+                    <li>Public Parking Garages</li>
+                    <li>Industrial Loading Bays</li>
+                  </ul>
+                </div>
+                <div class="info-box reveal" style="animation-delay: 0.1s">
+                  <h4>Safety Specs</h4>
+                  <ul class="custom-list">
+                    <li>R11 Anti-Slip Rating</li>
+                    <li>High Compression Strength</li>
+                    <li>Frost & Weather Resistant</li>
+                  </ul>
+                </div>
+                <div class="info-box reveal" style="animation-delay: 0.2s">
+                  <h4>Available Sizes</h4>
+                  <p class="info-text">600x600mm | 400x400mm | 300x300mm</p>
+                </div>
+                <div class="info-box reveal" style="animation-delay: 0.3s">
+                  <h4>Finish</h4>
+                  <p class="info-text">Matt Grit Finish for Maximum Traction</p>
+                </div>
+              </div>`,
+          gallery: [
+            "img/product/parking1.png",
+            "img/product/parking2.png",
+            "img/product/parking3.png",
+          ],
+        },
+        coolroof: {
+          title: "Cool Roof Thermal Tiles",
+          bannerTitle: "Cool Roof",
+          image: "img/product/cool-roof.png",
+          intro:
+            "High-SRI tiles designed to reflect solar radiation and keep your interiors significantly cooler.They reduce heat absorption by reflecting sunlight and efficiently releasing stored heat, helping maintain comfortable indoor temperatures throughout the day.By lowering roof surface temperatures, these tiles help reduce air-conditioning usage and overall energy consumption.",
+          content: `
+              <div class="product-info-grid">
+                <div class="info-box reveal">
+                  <h4>Performance</h4>
+                  <ul class="custom-list">
+                    <li>90+ Solar Reflective Index</li>
+                    <li>Energy Cost Reduction</li>
+                    <li>Lower Urban Heat Island Effect</li>
+                  </ul>
+                </div>
+                <div class="info-box reveal" style="animation-delay: 0.1s">
+                  <h4>Ideal For</h4>
+                  <ul class="custom-list">
+                    <li>Residential Terraces</li>
+                    <li>Cold Storage Facilities</li>
+                    <li>Industrial Rooftops</li>
+                  </ul>
+                </div>
+                <div class="info-box reveal" style="animation-delay: 0.2s">
+                  <h4>Composition</h4>
+                  <p class="info-text">Ultra-white Ceramic with Reflective Glaze</p>
+                </div>
+                <div class="info-box reveal" style="animation-delay: 0.3s">
+                  <h4>Maintenance</h4>
+                  <p class="info-text">Fungus resistant and easy to clean.</p>
+                </div>
+              </div>`,
+          gallery: [
+            "img/product/cool1.png",
+            "img/product/cool2.png",
+            "img/product/cool3.png",
+          ],
+        },
+        elitegrano: {
+          title: "Elite Grano Collection",
+          bannerTitle: "Elite Grano",
+          image: "img/home/Elite Grano Finish.png",
+          intro:
+            "A premium collection inspired by the raw beauty of natural granite and stone textures.It features rich granular detailing that delivers an authentic stone-like appearance with refined elegance.Designed to complement both modern and classic spaces, the collection offers a timeless aesthetic.High-strength surfaces ensure durability under heavy foot traffic without compromising visual appeal.Advanced finishing techniques provide consistent color depth, texture clarity, and long-lasting performance.",
+          content: `
+                <div class="product-info-grid">
+                  <div class="info-box reveal">
+                    <h4>Design Aesthetic</h4>
+                    <ul class="custom-list">
+                      <li>Multi-tonal Granular Texture</li>
+                      <li>Authentic Stone Feel</li>
+                      <li>Luxury Matte Appearance</li>
+                    </ul>
+                  </div>
+                  <div class="info-box reveal" style="animation-delay: 0.1s">
+                    <h4>Durability</h4>
+                    <ul class="custom-list">
+                      <li>Scratch & Stain Resistant</li>
+                      <li>Zero Color Fading</li>
+                      <li>Heavy Footfall Approved</li>
+                    </ul>
+                  </div>
+                  <div class="info-box reveal" style="animation-delay: 0.2s">
+                      <h4>Formats</h4>
+                      <p class="info-text">800x1200mm | 600x1200mm</p>
+                  </div>
+                </div>`,
+          gallery: [
+            "img/product/grano1.png",
+            "img/product/grano2.png",
+            "img/product/grano3.png",
+          ],
+        },
+        outdoor: {
+          title: "Outdoor Tiles",
+          bannerTitle: "Outdoor Collection",
+          image: "img/product/outdoortiles.png",
+          intro:
+            "Designed to perform in open-air environments, outdoor tiles offer excellent resistance to weather, moisture, and surface wear. Their anti-slip texture ensures safety in wet conditions, while the durable body maintains strength and appearance despite constant exposure to sun, rain, and temperature variations.",
+          content: `
+      <div class="product-info-grid">
+        <div class="info-box reveal">
+          <h4>Applications</h4>
+          <ul class="custom-list">
+            <li>Gardens & Landscapes</li>
+            <li>Walkways & Pathways</li>
+            <li>Balconies & Terraces</li>
+          </ul>
+        </div>
+        <div class="info-box reveal" style="animation-delay: 0.1s">
+          <h4>Features</h4>
+          <ul class="custom-list">
+            <li>Anti-Slip Surface</li>
+            <li>Weather & UV Resistant</li>
+            <li>High Load Bearing</li>
+          </ul>
+        </div>
+        <div class="info-box reveal" style="animation-delay: 0.2s">
+          <h4>Available Sizes</h4>
+          <p class="info-text">600x600mm | 300x600mm</p>
+        </div>
+        <div class="info-box reveal" style="animation-delay: 0.3s">
+          <h4>Finish</h4>
+          <p class="info-text">Structured Matte for Outdoor Grip</p>
+        </div>
+      </div>`,
+          gallery: [
+            "img/product/ot1.png",
+            "img/product/ot2.png",
+            "img/product/ot3.png",
+          ],
+        },
+        fullbody: {
+          title: "Full Body Tiles",
+          bannerTitle: "Full Body Series",
+          image: "img/product/full-body-tiles.png",
+          intro:
+            "Full body tiles are manufactured with uniform composition throughout the tile thickness, ensuring consistent color and strength even after surface wear. Built for extreme durability, they are ideal for high-traffic commercial and industrial spaces where long-term performance is essential.",
+          content: `
+      <div class="product-info-grid">
+        <div class="info-box reveal">
+          <h4>Best Used In</h4>
+          <ul class="custom-list">
+            <li>Shopping Malls</li>
+            <li>Airports & Metro Stations</li>
+            <li>Factories & Warehouses</li>
+          </ul>
+        </div>
+        <div class="info-box reveal" style="animation-delay: 0.1s">
+          <h4>Advantages</h4>
+          <ul class="custom-list">
+            <li>Same Color Through Body</li>
+            <li>High Abrasion Resistance</li>
+            <li>Long Life Performance</li>
+          </ul>
+        </div>
+        <div class="info-box reveal" style="animation-delay: 0.2s">
+          <h4>Thickness</h4>
+          <p class="info-text">12mm – 20mm Heavy Duty</p>
+        </div>
+        <div class="info-box reveal" style="animation-delay: 0.3s">
+          <h4>Finish</h4>
+          <p class="info-text">Matt / Rustic Industrial Finish</p>
+        </div>
+      </div>`,
+          gallery: [
+            "img/product/fb1.png",
+            "img/product/fb2.png",
+            "img/product/fb3.png",
+          ],
+        },
+        landscape: {
+          title: "Exterior & Landscape Tiles",
+          bannerTitle: "Landscape Series",
+          image: "img/product/outdoortiles2.png",
+          intro:
+            "Exterior and landscape tiles are engineered to blend natural aesthetics with functional strength. Their textured surfaces provide enhanced grip, while the robust construction withstands outdoor conditions, making them ideal for public spaces and architectural landscapes.",
+          content: `
+      <div class="product-info-grid">
+        <div class="info-box reveal">
+          <h4>Applications</h4>
+          <ul class="custom-list">
+            <li>Parks & Public Spaces</li>
+            <li>Hotel Exteriors</li>
+            <li>Poolside Areas</li>
+          </ul>
+        </div>
+        <div class="info-box reveal" style="animation-delay: 0.1s">
+          <h4>Surface Properties</h4>
+          <ul class="custom-list">
+            <li>High Slip Resistance</li>
+            <li>Water & Stain Resistant</li>
+            <li>Textured Stone Look</li>
+          </ul>
+        </div>
+        <div class="info-box reveal" style="animation-delay: 0.2s">
+          <h4>Design Style</h4>
+          <p class="info-text">Natural Stone & Earthy Textures</p>
+        </div>
+        <div class="info-box reveal" style="animation-delay: 0.3s">
+          <h4>Durability</h4>
+          <p class="info-text">Built for Long-Term Outdoor Exposure</p>
+        </div>
+      </div>`,
+          gallery: [
+            "img/product/et1.png",
+            "img/product/et2.png",
+            "img/product/et3.png",
+          ],
+        },
+      };
+
+      // Execution Logic
+      const params = new URLSearchParams(window.location.search);
+      const type = params.get("type") || "parking"; // Default to parking
+
+      const product = data[type];
+
+      if (product) {
+        document.getElementById("productTitle").innerText = product.title;
+        document.getElementById("bannerTitle").innerText = product.bannerTitle;
+        document.getElementById("productIntro").innerText = product.intro;
+        document.getElementById("productContent").innerHTML = product.content;
+
+        // Update Image if it exists
+        if (product.image) {
+          document.getElementById("mainProductImg").src = product.image;
+        }
+      }
+
+      // Render Application Gallery
+      const galleryContainer = document.getElementById("productGallery");
+      galleryContainer.innerHTML = "";
+
+      if (product.gallery && product.gallery.length > 0) {
+        product.gallery.forEach((img) => {
+          const col = document.createElement("div");
+          col.className = "col-lg-4 col-md-6 mb-4 gallery-item reveal";
+
+          col.innerHTML = `
+        <img src="${img}" alt="Application Image" class="img-fluid">
+      `;
+
+          galleryContainer.appendChild(col);
+        });
+      }
+    </script>
   </body>
 </html>
