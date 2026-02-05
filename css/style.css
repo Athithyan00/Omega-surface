@@ -5416,3 +5416,46 @@ h6 {
     transform: scale(1.1);
     filter: brightness(0.4) blur(1px);
 }
+.gallery-img-box{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  transition:all .5s ease;
+}
+
+.gallery-img-box img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  transition:1s;
+}
+
+.gallery-overlay{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:25px;
+  background:linear-gradient(
+    transparent,
+    rgba(191,161,74,0.88)
+  );
+  color:#fff;
+  transform:translateY(100%);
+  transition:.4s;
+}
+
+.gallery-img-box:hover .gallery-overlay{
+  transform:translateY(0);
+}
+
+.gallery-img-box:hover img{
+  transform:scale(1.1);
+}
+
+@media(max-width:991px){
+.gallery-img-box img{height:260px;}
+}
+@media(max-width:575px){
+.gallery-img-box img{height:220px;}
+}
