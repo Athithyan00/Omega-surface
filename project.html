@@ -38,11 +38,7 @@
               <li><a href="about-us.html">About</a></li>
 
               <li class="menu-has-children">
-                <a href="#">Works</a>
-                <ul class="list">
-                  <li><a href="project.html">Project</a></li>
-                  <li><a href="project-details.html">Project Details</a></li>
-                </ul>
+                <a href="project.html">Product</a>
               </li>
 
               <li class="menu-has-children">
@@ -70,15 +66,7 @@
           <a href="about-us.html">About</a>
         </li>
         <li>
-          <a href="#">Works</a>
-          <ul class="list">
-            <li>
-              <a href="project.html">Project</a>
-            </li>
-            <li>
-              <a href="project-details.html">Project Details</a>
-            </li>
-          </ul>
+          <a href="project.html">Product</a>
         </li>
         <li>
           <a href="blog.html">Gallery</a>
@@ -198,91 +186,261 @@
           </div>
 
           <div class="header-right col-lg-4">
-            <h1>Projects</h1>
+            <h1>Our Tiles</h1>
             <p class="pt-20">
-              If you are looking at blank cassettes on the web, you may be very
-              confused at the difference in price.
+              Discover premium tiles crafted to elevate every space. From
+              timeless textures to modern finishes, our collection blends
+              elegance, durability, and design excellence.
             </p>
           </div>
-          
         </div>
       </div>
     </section>
     <!--================End Banner Area =================-->
 
     <!--================ Start Project Area =================-->
+    <style>
+      .section_gap {
+        padding: 80px 0;
+      }
+
+      .project-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 16px;
+        text-align: center;
+        height: 100%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .project-img {
+        width: 100%;
+        height: 300px; /* FIXED IMAGE SIZE */
+        overflow: hidden;
+        border-radius: 14px;
+        margin-bottom: 15px;
+      }
+
+      .project-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .project-card:hover img {
+        transform: scale(1.1);
+      }
+
+      .project-card h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      .project-card p {
+        font-size: 14px;
+        color: #666;
+        margin: 0;
+      }
+
+      .project-btn {
+        display: inline-block;
+        padding: 10px 22px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        background: #f5ca56;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .project-btn:hover {
+        color: black;
+        background: #f7bf27;
+      }
+
+      @media (max-width: 768px) {
+        .project-img {
+          height: 200px;
+        }
+      }
+    </style>
+
     <section class="section_gap project-area">
       <div class="container">
         <div class="row">
-         
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="img/product/parking-tiles.png" alt="Parking Tiles" />
+              </div>
+              <h4>Parking Tiles</h4>
+              <p>
+                High-strength anti-skid tiles designed for heavy vehicle
+                traffic.
+              </p>
+              <a href="project-details.html?type=parking" class="project-btn"
+                >View Collection</a
+              >
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="img/product/cool-roof.png" alt="Cool Roof Tiles" />
+              </div>
+              <h4>Cool Roof Tiles</h4>
+              <p>
+                Heat-resistant tiles that reduce surface temperature naturally.
+              </p>
+
+              <a href="project-details.html?type=coolroof" class="project-btn"
+                >View Collection</a
+              >
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-img">
+                <img
+                  src="img/product/elite-grano.png"
+                  alt="Elite Grano Collection"
+                />
+              </div>
+              <h4>Elite Grano Collection</h4>
+              <p>
+                Premium grano tiles with elegant texture and lasting durability.
+              </p>
+              <a href="project-details.html?type=elitegrano" class="project-btn"
+                >View Collection</a
+              >
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="img/product/outdoortiles.png" alt="Outdoor Tiles" />
+              </div>
+              <h4>Outdoor Tiles</h4>
+              <p>Weather-resistant tiles ideal for gardens and open spaces.</p>
+              <a href="project-details.html?type=outdoor" class="project-btn"
+                >View Collection</a
+              >
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-img">
+                <img
+                  src="img/product/full-body-tiles.png"
+                  alt="Full Body Tiles"
+                />
+              </div>
+              <h4>Full Body Tiles</h4>
+              <p>
+                Heavy-duty tiles suitable for commercial and high-traffic areas.
+              </p>
+              <a href="project-details.html?type=fullbody" class="project-btn"
+                >View Collection</a
+              >
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="img/product/outdoortiles2.png" alt="Outdoor Tiles" />
+              </div>
+              <h4>Exterior Tiles</h4>
+              <p>
+                Durable anti-slip tiles for exterior and landscape applications.
+              </p>
+              <a href="project-details.html?type=landscape" class="project-btn"
+                >View Collection</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
     <!--================ End Project Area =================-->
 
     <!--================ start footer Area  =================-->
-    <footer class="footer_area section_gap">
+    <footer class="footer_area omega_footer section_gap">
       <div class="container">
         <div class="row footer_inner">
-          <div class="col-lg-5 col-sm-6">
+          <div class="col-lg-3 col-sm-6">
             <aside class="f_widget ab_widget">
               <div class="f_title">
-                <h3>About Me</h3>
+                <h3>Omega</h3>
               </div>
               <p>
-                Do you want to be even more successful? Learn to love learning
-                and growth. The more effort you put into improving your skills,
+                Omega provides top-tier creative solutions and innovative growth
+                strategies.
               </p>
-              <p>
-                Copyright &copy;
+              <p class="copyright">
+                Copyright @2026 &copy;
                 <script>
                   document.write(new Date().getFullYear());
                 </script>
-                All rights reserved |
-                <a href="https://www.paletteproduction.com/" target="_blank">
-                  Palette Production
-                </a>
+                OmegaSurface|Developed by paletteproduction
               </p>
             </aside>
           </div>
-          <div class="col-lg-5 col-sm-6">
-            <aside class="f_widget news_widget">
+
+          <div class="col-lg-2 col-sm-6">
+            <aside class="f_widget link_widget">
               <div class="f_title">
-                <h3>Newsletter</h3>
+                <h3>Quick Links</h3>
               </div>
-              <p>Stay updated with our latest trends</p>
-              <div id="mc_embed_signup">
-                <form
-                  target="_blank"
-                  action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                  method="get"
-                  class="subscribe_form relative"
-                >
-                  <div class="input-group d-flex flex-row">
-                    <input
-                      name="EMAIL"
-                      placeholder="Enter email address"
-                      onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Email Address '"
-                      required=""
-                      type="email"
-                    />
-                    <button class="btn sub-btn">
-                      <span class="lnr lnr-arrow-right"></span>
-                    </button>
-                  </div>
-                  <div class="mt-10 info"></div>
-                </form>
+              <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </aside>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <aside class="f_widget gallery_widget">
+              <div class="f_title">
+                <h3>Gallery</h3>
+              </div>
+              <div class="insta_feed">
+                <div class="gallery_item">
+                  <img src="./img/about-4.png" alt="Gallery 1" />
+                </div>
+                <div class="gallery_item">
+                  <img src="img/about-7.png" alt="Gallery 2" />
+                </div>
+                <div class="gallery_item">
+                  <img src="img/about-3.png" alt="Gallery 3" />
+                </div>
+                <div class="gallery_item">
+                  <img src="img/about-2.png" alt="Gallery 4" />
+                </div>
               </div>
             </aside>
           </div>
-          <div class="col-lg-2">
+
+          <div class="col-lg-3">
             <aside class="f_widget social_widget">
               <div class="f_title">
-                <h3>Follow Me</h3>
+                <h3>Follow Us</h3>
               </div>
-              <p>Let us be social</p>
-              <ul class="list">
+              <ul class="list social_icons">
                 <li>
                   <a href="#"><i class="fa fa-facebook"></i></a>
                 </li>
@@ -290,10 +448,10 @@
                   <a href="#"><i class="fa fa-twitter"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-behance"></i></a>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
                 </li>
               </ul>
             </aside>
