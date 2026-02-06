@@ -1,37 +1,35 @@
 <?php
+    $to = "paletteproductiondevelopers@gmail.com"; 
 
-    $to = "rockybd1995@gmail.com";
-    $from = $_REQUEST['email'];
-    $name = $_REQUEST['name'];
-    $subject = $_REQUEST['subject'];
-    $number = $_REQUEST['number'];
-    $cmessage = $_REQUEST['message'];
+    $from = $_POST['email'];
+    $name = $_POST['name'];
+    $csubject = $_POST['subject']; 
+    $cmessage = $_POST['message'];
 
-    $headers = "From: $from";
-	$headers = "From: " . $from . "\r\n";
-	$headers .= "Reply-To: ". $from . "\r\n";
-	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+    // Headers Fix:
+    // "From" la unga website domain mail irukanum (e.g., info@yourdomain.com)
+    // Illana unga recipient mail-aiyae kudunga, athu spam-a thadukkum.
+    $headers = "From: Omega Contact <paletteproductiondevelopers@gmail.com>\r\n";
+    $headers .= "Reply-To: ". $from . "\r\n"; // Inga user mail irukkurathaala, reply panna user-ku pogum.
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-    $subject = "You have a message from your Bitmap Photography.";
+    $email_subject = "Omega Contact Form: " . $csubject;
 
-    $logo = 'img/logo.png';
-    $link = '#';
+    $body = "<!DOCTYPE html><html lang='en'><body>";
+    $body .= "<div style='border: 1px solid #eee; padding: 20px; font-family: sans-serif;'>";
+    $body .= "<h2>New Message from Omega Contact Form</h2>";
+    $body .= "<p><strong>Name:</strong> {$name}</p>";
+    $body .= "<p><strong>Email:</strong> {$from}</p>";
+    $body .= "<p><strong>Subject:</strong> {$csubject}</p>";
+    $body .= "<p><strong>Message:</strong><br>" . nl2br($cmessage) . "</p>";
+    $body .= "</div></body></html>";
 
-	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
-	$body .= "<table style='width: 100%;'>";
-	$body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
-	$body .= "<a href='{$link}'><img src='{$logo}' alt=''></a><br><br>";
-	$body .= "</td></tr></thead><tbody><tr>";
-	$body .= "<td style='border:none;'><strong>Name:</strong> {$name}</td>";
-	$body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
-	$body .= "</tr>";
-	$body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$csubject}</td></tr>";
-	$body .= "<tr><td></td></tr>";
-	$body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
-	$body .= "</tbody></table>";
-	$body .= "</body></html>";
+    $send = mail($to, $email_subject, $body, $headers);
 
-    $send = mail($to, $subject, $body, $headers);
-
+    if ($send) {
+        echo "success";
+    } else {
+        echo "error";
+    }
 ?>
