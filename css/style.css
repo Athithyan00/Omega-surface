@@ -997,6 +997,52 @@ button:hover {
 .project-area {
   padding-bottom: 120px;
 }
+/* ===== Project Banner ===== */
+
+.project_banner_area {
+  width: 100%;
+  height: 625px;
+  background: url("../img/banner/banner-b.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+.project_banner_area .banner-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+}
+
+/* LEFT aligned text like gallery */
+.project_banner_area .banner-content {
+  color: #fff;
+  max-width: 600px;
+}
+
+.project_banner_area h1 {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.project_banner_area p {
+  font-size: 16px;
+  color: #ddd;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project_banner_area {
+    height: 220px;
+  }
+
+  .project_banner_area h1 {
+    font-size: 28px;
+  }
+}
+
 @media (max-width: 991px) {
   .project-area {
     padding-bottom: 80px;
@@ -1474,6 +1520,43 @@ button:hover {
 /* ============================================================================================ 
 Start Blog Area css
 ============================================================================================ */
+/* ================= PAGE BANNER STYLE (GLOBAL) ================= */
+
+.omega-page-banner {
+  width: 100%;
+  height: 625px;
+  background: url("../img/banner/banner-b3.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+
+/* dark overlay */
+.omega-banner-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+}
+
+/* text center */
+.banner-content h2 {
+  color: #f4b41a;
+  max-width: 700px;
+}
+
+.banner-content h1 {
+  color:#fff;
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.banner-content p {
+  font-size: 18px;
+  color: #ddd;
+}
+
 
 /* <style> */
 .section-title {
@@ -2696,201 +2779,315 @@ Start Blog Area css
 /*----------------------------------------------------*/
 /*============== contact_area css ================*/
 /* Container and Layout */
+/* ================= CONTACT PAGE FIX ================= */
+
+/* ================= CONTACT SECTION ================= */
+/* ==================================================
+   CONTACT PAGE BANNER STYLE
+================================================== */
+
+.contact-banner-area {
+  background: url("../img/banner/banner-b2.jpg"); /* CHANGE IMAGE */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 630px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Dark overlay */
+.contact-banner-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Text Box */
+.contact-banner-text {
+  max-width: 650px;
+}
+
+/* Small heading */
+.contact-banner-text h6 {
+  color: #f5ca56;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+/* Main heading */
+.contact-banner-text h1 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* Paragraph */
+.contact-banner-text p {
+  color: #e0e0e0;
+  font-size: 16px;
+  margin-top: 15px;
+  max-width: 520px;
+}
+
 .omega-contact-wrapper {
-  padding: 60px 20px;
-  background-color: #ffffff;
-  font-family: sans-serif;
+    background: #fff;
+    padding: 50px 20px; /* Reduced top padding for less blank space */
 }
 
 .omega-main-container {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    padding: 40px; /* Reduced padding */
+    border-radius: 10px;
+}
+
+.omega-header-area {
+    text-align: center;
+    margin-bottom: 40px; /* Reduced spacing */
 }
 
 .omega-label {
-  color: #ffb400;
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 1px;
-  border-bottom: 2px solid #ffb400;
-  padding-bottom: 5px;
+    color: #f5ca56;
+    font-weight: 700;
+    letter-spacing: 5px;
+    border-bottom: 2px solid #f5ca56;
+    padding-bottom: 6px;
+    display: inline-block;
 }
 
 .omega-main-title {
-  font-size: 32px;
-  font-weight: 800;
-  margin: 15px 0 40px 0;
-  color: #1a1a1a;
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: 15px;
+    color: #111;
 }
 
 .omega-flex-row {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  align-items: flex-start; /* Map stretch aagatha thadukkum */
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 
-/* Map Section */
+/* Map */
 .omega-map-box {
-  flex: 1;
-  min-width: 350px;
-  height: 450px; /* Fixed height for square look */
+    flex: 1;
+    min-width: 350px;
 }
 
 .omega-google-map {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    min-height: 400px; /* Slightly reduced */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-/* Form Section */
+/* Form */
 .omega-form-box {
-  flex: 1.2;
-  min-width: 350px;
+    flex: 1.1;
+    min-width: 350px;
 }
 
 .omega-form-title {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #333;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .omega-form-hint {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 25px;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
 }
 
 .omega-input-group {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
 }
 
 .omega-field {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  font-size: 14px;
-  margin-bottom: 15px;
-  outline: none;
-  box-sizing: border-box;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    outline: none;
 }
 
 .omega-field:focus {
-  border-color: #ffb400;
+    border-color: #f5ca56;
 }
 
 .omega-submit-btn {
-  background-color: #ffb400;
-  color: #fff;
-  padding: 15px 35px;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  text-transform: uppercase;
+    background: #f5ca56;
+    color: #fff;
+    padding: 14px 40px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .omega-input-group {
-    flex-direction: column;
-    gap: 0;
-  }
-  .omega-map-box {
-    min-width: 100%;
-    height: 300px;
-  }
+.omega-submit-btn:hover {
+    background: #e6b800;
 }
 
-/* Newsletter Section Main Style */
+/* ================= NEWSLETTER ================= */
 .omega-newsletter-area {
-  background-color: #ffb400; /* Original Yellow Color */
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.omega-news-container {
-  max-width: 800px;
-  margin: 0 auto;
+    background: #f5ca56;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .omega-news-title {
-  font-size: 30px;
-  font-weight: 800;
-  color: #000;
-  margin-bottom: 30px;
-  font-family: sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #000;
 }
 
-/* White Input Box Wrapper */
 .omega-news-form-wrapper {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  padding: 5px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 6px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 .omega-news-form {
-  display: flex;
-  width: 100%;
+    display: flex;
 }
 
 .omega-news-input {
-  flex: 1;
-  border: none;
-  padding: 15px 20px;
-  font-size: 16px;
-  outline: none;
-  border-radius: 4px 0 0 4px;
+    flex: 1;
+    padding: 15px;
+    border: none;
+    outline: none;
 }
 
 .omega-news-submit {
-  background: transparent;
-  border: none;
-  padding: 0 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
 }
 
 .omega-send-icon {
-  color: #ffb400;
-  font-size: 24px;
-  transition: transform 0.3s;
+    font-size: 22px;
+    color: #f5ca56;
+    transition: transform 0.3s;
 }
 
 .omega-news-submit:hover .omega-send-icon {
   transform: scale(1.2);
 }
 
-.omega-news-footer-text {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #333;
-  font-family: sans-serif;
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991px) {
+    .omega-main-container {
+        padding: 35px 25px;
+    }
+
+    .omega-main-title {
+        font-size: 26px;
+    }
+
+    .omega-flex-row {
+        gap: 30px;
+    }
 }
 
-/* Mobile Friendly */
-@media (max-width: 480px) {
-  .omega-news-title {
-    font-size: 24px;
-  }
-  .omega-news-form-wrapper {
-    max-width: 100%;
-  }
+@media (max-width: 768px) {
+    .omega-contact-wrapper {
+        padding: 40px 15px;
+    }
+
+    .omega-main-container {
+        padding: 25px 20px;
+    }
+
+    .omega-flex-row {
+        flex-direction: column;
+    }
+
+    .omega-map-box,
+    .omega-form-box {
+        min-width: 100%;
+    }
+
+    .omega-google-map {
+        min-height: 280px;
+    }
+
+    .omega-input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .omega-main-title {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .omega-form-title {
+        font-size: 20px;
+    }
+
+    .omega-submit-btn {
+        width: 100%;
+        padding: 14px;
+    }
 }
-/* End Contact Success and error Area css
-============================================================================================ */
+
+@media (max-width: 576px) {
+    .omega-main-title {
+        font-size: 22px;
+    }
+
+    .omega-form-hint {
+        font-size: 13px;
+    }
+
+    .omega-field {
+        font-size: 13px;
+        padding: 12px 14px;
+    }
+
+    .omega-news-title {
+        font-size: 22px;
+    }
+
+    .omega-news-form {
+        flex-direction: column;
+    }
+
+    .omega-news-input,
+    .omega-news-submit {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .omega-send-icon {
+        font-size: 20px;
+    }
+}
+
+
+/*============================================================================================ */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*============== Elements Area css ================*/
@@ -4757,6 +4954,43 @@ h6 {
   height: 100%;
   object-fit: cover;
 }
+/* BLOG BANNER LIKE GALLERY */
+
+.omega-blog-banner {
+  background: url("../img/banner/banner-b5.jpg") center/cover no-repeat;
+  height: 635px;;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* dark transparent layer */
+.omega-banner-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* text left side like gallery */
+.omega-banner-text {
+  max-width: 650px;
+  color: #fff;
+}
+
+.omega-banner-text h1 {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+   color: #fff;
+}
+
+.omega-banner-text p {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #ddd;
+}
 
 /* Right Side Content Styling */
 .content-column {
@@ -5581,303 +5815,192 @@ h6 {
   transform: scale(1.1);
   filter: brightness(0.4) blur(1px);
 }
+/* ==================================================
+   GALLERY PAGE – GRID, ANIMATION, GOLD BORDER
+================================================== */
+
+.gallery-page {
+  background: #f8f9fa;
+}
+/* ==================================================
+   GALLERY PAGE BANNER (REFERENCE STYLE)
+================================================== */
+
+.gallery-banner-area {
+  background: url("../img/banner/banner-blog.png"); /* CHANGE IMAGE */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 630px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Transparent dark overlay */
+.gallery-banner-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Text Box */
+.gallery-banner-text {
+  max-width: 600px;
+}
+
+/* Small Title */
+.gallery-banner-text h2 {
+  color: #f4b41a;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+/* Main Title */
+.gallery-banner-text h1 {
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* Paragraph */
+.gallery-banner-text p {
+  color: #e0e0e0;
+  font-size: 16px;
+  margin-top: 15px;
+  max-width: 520px;
+}
+
+
+/* ===============================
+   GALLERY IMAGE CARD
+================================ */
+
 .gallery-img-box {
   position: relative;
+  height: 260px;
+  padding: 3px; /* gold border thickness */
+  border-radius: 16px;
   overflow: hidden;
-  border-radius: 18px;
-  transition: all 0.5s ease;
+
+  /* GOLD GRADIENT BORDER */
+  background: linear-gradient(
+    135deg,
+    #d4af37,
+    #f6e27f,
+    #c9a227,
+    #b8860b
+  );
+
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
+
+/* inner dark layer (keeps border visible) */
+.gallery-img-box::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #000;
+  border-radius: 13px;
+  z-index: 0;
+}
+
+/* ===============================
+   IMAGE
+================================ */
 
 .gallery-img-box img {
   width: 100%;
-  height: 320px;
+  height: 100%;
   object-fit: cover;
-  transition: 1s;
+  border-radius: 13px;
+  position: relative;
+  z-index: 1;
+
+  transition: transform 0.6s ease, filter 0.6s ease;
 }
+
+/* image zoom + slight darken */
+.gallery-img-box:hover img {
+  transform: scale(1.12);
+  filter: brightness(0.85);
+}
+
+/* ===============================
+   OVERLAY + TEXT (HIGH CONTRAST)
+================================ */
 
 .gallery-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 25px;
-  background: linear-gradient(transparent, rgba(191, 161, 74, 0.88));
-  color: #fff;
-  transform: translateY(100%);
-  transition: 0.4s;
+  inset: 3px;
+  border-radius: 13px;
+  z-index: 2;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.45),
+    transparent
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
+/* show overlay */
 .gallery-img-box:hover .gallery-overlay {
+  opacity: 1;
   transform: translateY(0);
 }
 
-.gallery-img-box:hover img {
-  transform: scale(1.1);
-}
+/* ===============================
+   TEXT STYLES (VERY CLEAR)
+================================ */
 
-@media (max-width: 991px) {
-  .gallery-img-box img {
-    height: 260px;
-  }
-}
-@media (max-width: 575px) {
-  .gallery-img-box img {
-    height: 220px;
-  }
-}
-
-/*testimonial*/
-.omega-testimonial-section {
-  padding: 100px 0;
-  overflow: hidden;
-}
-
-.testi-sidebar-text h2 {
-  font-size: 40px;
+.gallery-overlay h4 {
+  color: #ffffff;
+  font-size: 20px;
   font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
+  letter-spacing: 0.6px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
 }
 
-.testi-slider-wrapper {
-  padding-left: 100px;
-}
-
-.yellow-accent-box {
-  position: absolute;
-  left: 0;
-  top: -20px;
-  width: 280px;
-  height: calc(100% + 40px);
-  background: #f5ca56;
-  z-index: 1;
-}
-
-.main-author-img {
-  position: relative;
-  z-index: 5;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.main-author-img img {
-  width: 100% !important;
-  height: auto;
-}
-
-.testi-nav-arrows {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-}
-
-.testi-nav-arrows button {
-  background: #0d5e52;
-  color: white;
-  border: none;
-  width: 45px;
-  height: 45px;
-  margin: 2px 0;
-  cursor: pointer;
-}
-
-.testi-content-body {
-  padding-left: 30px;
-}
-
-.star-rating {
-  color: #f5ca56;
-  margin-bottom: 15px;
-}
-
-.testimonial-text {
-  font-size: 18px;
-  color: #666;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
-
-.quote-box {
-  background: #f4f7f6;
-  padding: 15px;
-  margin-right: 20px;
-  border-radius: 4px;
-}
-
-/* Container Spacing */
-.os-testi-wrapper {
-  padding: 100px 0;
-  background: #fff;
-}
-
-/* Sidebar Text */
-.os-testi-main-title {
-  font-size: 42px;
-  font-weight: 800;
-  line-height: 1.1;
-  color: #1a1a1a;
-}
-
-.os-testi-sub-text {
-  margin-top: 20px;
-  color: #777;
-  font-size: 15px;
-}
-
-/* Slider Layout */
-.os-testi-slider-container {
-  position: relative;
-  padding-left: 100px;
-}
-
-.os-testi-yellow-shape {
-  position: absolute;
-  left: 0;
-  top: -30px;
-  width: 250px;
-  height: calc(100% + 60px);
-  background: #f5ca56;
-  z-index: 1;
-}
-
-.os-testi-nav-group {
-  position: absolute;
-  left: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  z-index: 10;
-}
-
-.os-testi-nav-btn {
-  background: #0d5e52;
-  color: #fff;
-  border: none;
-  width: 45px;
-  height: 45px;
-  margin: 3px 0;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.os-testi-nav-btn:hover {
-  background: #094038;
-}
-
-/* Content Blocks */
-.os-testi-image-box {
-  position: relative;
-  z-index: 5;
-  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.os-testi-image-box img {
-  width: 100% !important;
-  display: block;
-}
-
-.os-testi-feedback-box {
-  padding-left: 40px;
-}
-
-.os-testi-stars {
-  color: #f5ca56;
-  margin-bottom: 15px;
+.gallery-overlay span {
+  color: #f5f5f5;
   font-size: 14px;
-}
-
-.os-testi-quote {
-  font-size: 17px;
-  line-height: 1;
-  color: #555;
-  font-style: italic;
-  margin-bottom: 25px;
-}
-
-.os-testi-user-meta {
-  display: flex;
-  align-items: center;
-}
-
-.os-testi-icon-bg {
-  background: #f8f9fa;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
-  border-radius: 4px;
-  color: #0d5e52;
-}
-
-.os-testi-user-details h4 {
-  margin: 0;
-  font-size: 18px;
   font-weight: 700;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-.os-testi-user-details span {
-  font-size: 13px;
-  color: #aaa;
+/* ===============================
+   HOVER EFFECTS (IMAGE ONLY)
+================================ */
+
+.gallery-img-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.55);
 }
-/* ==========================================================================
-   Mobile Responsive Adjustments for os-testi-wrapper
-   ========================================================================== */
 
-@media (max-width: 991px) {
-  /* 1. Reset the main container padding */
-  .os-testi-slider-container {
-    padding-left: 0;
-    margin-top: 40px;
-  }
+/* GOLD SHIMMER (BORDER ONLY) */
+.gallery-img-box:hover {
+  background-size: 300% 300%;
+  animation: goldShimmer 3s ease infinite;
+}
 
-  /* 2. Fix the Yellow Box - Make it shorter and centered behind image */
-  .os-testi-yellow-shape {
-    width: 180px; /* Narrower for mobile */
-    height: 180px; /* Square shape */
-    top: 0;
-    left: 0; /* Align to left to match your second screenshot */
-    z-index: 1;
-  }
-
-  /* 3. SHRINK THE IMAGE - This is the fix for "perusa varuthu" */
-  .os-testi-image-box {
-    max-width: 200px !important; /* Forces a smaller size */
-    margin-left: 60px !important; /* Creates the overlap effect from your screenshot */
-    z-index: 5;
-  }
-
-  .os-testi-image-box img {
-    width: 100% !important;
-    height: auto;
-  }
-
-  /* 4. Navigation Buttons - Side by side on the yellow box */
-  .os-testi-nav-group {
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    flex-direction: column; /* Keep vertical like the original design */
-  }
-
-  .os-testi-nav-btn {
-    width: 35px; /* Slightly smaller buttons for mobile */
-    height: 35px;
-  }
-
-  /* 5. Content Spacing */
-  .os-testi-feedback-box {
-    padding-left: 0;
-    margin-top: 20px;
-    text-align: left; /* Keeps text left-aligned like the image */
-  }
-
-  .os-testi-stars {
-    margin-top: 15px;
-  }
+@keyframes goldShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

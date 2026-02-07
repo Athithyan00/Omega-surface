@@ -21,9 +21,13 @@
     <link rel="stylesheet" href="vendors/scroll/jquery.mCustomScrollbar.css" />
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- AOS Animation CSS -->
+   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+   
   </head>
 
-  <body id="service">
+  <body>
     <!-- ===== Desktop Header Only ===== -->
     <header class="desktop-header d-none d-lg-block">
       <div class="container">
@@ -38,15 +42,11 @@
               <li><a href="about-us.html">About</a></li>
 
               <li class="menu-has-children">
-                <a href="#">Works</a>
-                <ul class="list">
-                  <li><a href="project.html">Project</a></li>
-                  <li><a href="project-details.html">Project Details</a></li>
-                </ul>
+               <a href="project.html">Project</a>
               </li>
 
               <li class="menu-has-children">
-                <a href="blog.html">Gallery</a>
+                <a href="gallery.html">Gallery</a>
               </li>
 
               <li class="menu-has-children">
@@ -70,18 +70,10 @@
           <a href="about-us.html">About</a>
         </li>
         <li>
-          <a href="#">Works</a>
-          <ul class="list">
-            <li>
-              <a href="project.html">Project</a>
-            </li>
-            <li>
-              <a href="project-details.html">Project Details</a>
-            </li>
-          </ul>
+          <a href="project.html">Project</a>
         </li>
         <li>
-          <a href="blog.html">Gallery</a>
+          <a href="gallery.html">Gallery</a>
         </li>
         <li>
           <a href="blog.html">Blog</a>
@@ -139,26 +131,8 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item submenu dropdown">
-                  <a
-                    href="#"
-                    class="nav-link dropdown-toggle"
-                    data-toggle="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Blog</a
-                  >
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="single-blog.html"
-                        >Blog Details</a
-                      >
-                    </li>
-                  </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="blog.html">Blog</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact</a>
@@ -182,198 +156,167 @@
       </div>
     </div>
     <!--================End Canvus Menu Area =================-->
-
-    <!--================ Banner Area =================-->
-    <section class="common_banner_area">
-      <div class="container-fluid">
-        <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-lg-8 header-left">
-            <div class="">
-              <img
-                class="img-fluid w-100"
-                src="img/banner/common-banner.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-
-          <div class="header-right col-lg-4">
-            <h1>Contact Us</h1>
-            <p class="pt-20">
-              If you are looking at blank cassettes on the web, you may be very
-              confused at the difference in price.
-            </p>
-          </div>
-          <div class="page_link">
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact Us</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================End Banner Area =================-->
-
-    <!--================Contact Area =================-->
-    <section class="omega-contact-wrapper">
-      <div class="omega-main-container">
-        <div class="omega-header-area">
-          <span class="omega-label">CONTACT</span>
-          <h2 class="omega-main-title">
-            If You Have Any Query, Please Contact Us
-          </h2>
-        </div>
-
-        <div class="omega-flex-row">
-          <div class="omega-map-box">
-            <iframe
-              class="omega-google-map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.1566576234563!2d77.24447207355799!3d11.176034351698775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9030e493a52b5%3A0xe5526a4bd09447b7!2sTulasi%20Tiles!5e0!3m2!1sen!2sin!4v1770123720057!5m2!1sen!2sin"
-              allowfullscreen
-              loading="lazy"
-            >
-            </iframe>
-          </div>
-
-          <div class="omega-form-box">
-            <h4 class="omega-form-title">Need a functional contact form?</h4>
-            <p class="omega-form-hint">
-              The contact form is currently inactive. Fill the details to
-              connect.
-            </p>
-
-            <form
-              class="omega-actual-form"
-              action="contact_process.php"
-              method="POST"
-            >
-              <div class="omega-input-group">
-                <input
-                  type="text"
-                  name="name"
-                  class="omega-field"
-                  placeholder="Your Name"
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  class="omega-field"
-                  placeholder="Your Email"
-                  required
-                />
-              </div>
-              <input
-                type="text"
-                name="subject"
-                class="omega-field"
-                placeholder="Subject"
-                required
-              />
-              <textarea
-                name="message"
-                class="omega-field omega-textarea"
-                placeholder="Message"
-                rows="6"
-                required
-              ></textarea>
-
-              <button type="submit" class="omega-submit-btn">
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================Contact Area =================-->
-
-    <section class="omega-newsletter-area">
-      <div class="omega-news-container">
-        <h2 class="omega-news-title">Subscribe the Newsletter</h2>
-
-        <div class="omega-news-form-wrapper">
-          <form class="omega-news-form">
-            <input
-              type="email"
-              class="omega-news-input"
-              placeholder="Enter Your Email"
-              required
-            />
-            <button type="submit" class="omega-news-submit">
-              <span class="omega-send-icon">➤</span>
-            </button>
-          </form>
-        </div>
-
-        <p class="omega-news-footer-text">
-          Don't worry, we won't spam you with emails.
+<!-- ============== CONTACT PAGE BANNER ================= -->
+<section class="contact-banner-area">
+  <div class="contact-banner-overlay">
+    <div class="container">
+      <div class="contact-banner-text">
+        <h6>GET IN TOUCH</h6>
+        <h1>Contact Us<br>For Better Insights</h1>
+        <p>
+          Reach out to us with your queries, ideas, or requirements.  
+          We are here to guide you with expert advice and premium solutions.
         </p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+<!-- ============== END CONTACT PAGE BANNER ================= -->
+
+<!-- ================ End banner section ================= -->
+<!--================Contact Area =================-->
+<section class="omega-contact-wrapper">
+  <div class="omega-main-container">
+     <div class="omega-header-area">
+      <!-- <span class="omega-label">CONTACT</span> -->
+      <h2 class="omega-main-title">
+        If You Have Any Query, Please Contact Us
+      </h2>
+    </div>
+
+    <div class="omega-flex-row">
+
+      <!-- Map -->
+      <div class="omega-map-box">
+        <iframe
+          class="omega-google-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.1566576234563!2d77.24447207355799!3d11.176034351698775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9030e493a52b5%3A0xe5526a4bd09447b7!2sTulasi%20Tiles!5e0!3m2!1sen!2sin!4v1770123720057"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Form -->
+      <div class="omega-form-box">
+        <h4 class="omega-form-title">Send Us a Message</h4>
+        <p class="omega-form-hint">
+          Fill in the details below and we’ll get back to you shortly.
+        </p>
+
+        <form class="omega-actual-form">
+          <div class="omega-input-group">
+            <input type="text" class="omega-field" placeholder="Your Name" required>
+            <input type="email" class="omega-field" placeholder="Your Email" required>
+          </div>
+
+          <input type="text" class="omega-field" placeholder="Subject" required>
+
+          <textarea
+            class="omega-field omega-textarea"
+            rows="6"
+            placeholder="Your Message"
+            required></textarea>
+
+          <button type="submit" class="omega-submit-btn">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--================Contact Area =================-->
+
+   <!--================ Newsletter Area =================-->
+<section class="omega-newsletter-area">
+  <div class="omega-news-container">
+    <h2 class="omega-news-title">Subscribe to Our Newsletter</h2>
+
+    <div class="omega-news-form-wrapper">
+      <form class="omega-news-form">
+        <input
+          type="email"
+          class="omega-news-input"
+          placeholder="Enter Your Email"
+          required>
+        <button type="submit" class="omega-news-submit">
+          <span class="omega-send-icon">➤</span>
+        </button>
+      </form>
+    </div>
+
+       <p class="omega-news-footer-text">
+        Don’t worry, we won’t spam you.
+        </p>
+       </div>
+     </section>
 
     <!--================ start footer Area  =================-->
-    <footer class="footer_area section_gap">
+  <footer class="footer_area omega_footer section_gap">
       <div class="container">
         <div class="row footer_inner">
-          <div class="col-lg-5 col-sm-6">
+          <div class="col-lg-3 col-sm-6">
             <aside class="f_widget ab_widget">
               <div class="f_title">
-                <h3>About Me</h3>
+                <h3>Omega</h3>
               </div>
               <p>
-                Do you want to be even more successful? Learn to love learning
-                and growth. The more effort you put into improving your skills,
+                Omega provides top-tier creative solutions and innovative growth
+                strategies.
               </p>
-              <p>
-                Copyright &copy;
+              <p class="copyright">
+                Copyright @2026 &copy;
                 <script>
                   document.write(new Date().getFullYear());
                 </script>
-                All rights reserved |
-                <a href="https://www.paletteproduction.com/" target="_blank">
-                  Palette Production
-                </a>
+                OmegaSurface|Developed by paletteproduction
               </p>
             </aside>
           </div>
-          <div class="col-lg-5 col-sm-6">
-            <aside class="f_widget news_widget">
+
+          <div class="col-lg-2 col-sm-6">
+            <aside class="f_widget link_widget">
               <div class="f_title">
-                <h3>Newsletter</h3>
+                <h3>Quick Links</h3>
               </div>
-              <p>Stay updated with our latest trends</p>
-              <div id="mc_embed_signup">
-                <form
-                  target="_blank"
-                  action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                  method="get"
-                  class="subscribe_form relative"
-                >
-                  <div class="input-group d-flex flex-row">
-                    <input
-                      name="EMAIL"
-                      placeholder="Enter email address"
-                      onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Email Address '"
-                      required=""
-                      type="email"
-                    />
-                    <button class="btn sub-btn">
-                      <span class="lnr lnr-arrow-right"></span>
-                    </button>
-                  </div>
-                  <div class="mt-10 info"></div>
-                </form>
+              <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </aside>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <aside class="f_widget gallery_widget">
+              <div class="f_title">
+                <h3>Gallery</h3>
+              </div>
+              <div class="insta_feed">
+                <div class="gallery_item">
+                  <img src="./img/about-4.png" alt="Gallery 1" />
+                </div>
+                <div class="gallery_item">
+                  <img src="img/about-7.png" alt="Gallery 2" />
+                </div>
+                <div class="gallery_item">
+                  <img src="img/about-3.png" alt="Gallery 3" />
+                </div>
+                <div class="gallery_item">
+                  <img src="img/about-2.png" alt="Gallery 4" />
+                </div>
               </div>
             </aside>
           </div>
-          <div class="col-lg-2">
+
+          <div class="col-lg-3">
             <aside class="f_widget social_widget">
               <div class="f_title">
-                <h3>Follow Me</h3>
+                <h3>Follow Us</h3>
               </div>
-              <p>Let us be social</p>
-              <ul class="list">
+              <ul class="list social_icons">
                 <li>
                   <a href="#"><i class="fa fa-facebook"></i></a>
                 </li>
@@ -381,10 +324,10 @@
                   <a href="#"><i class="fa fa-twitter"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-behance"></i></a>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
                 </li>
               </ul>
             </aside>
