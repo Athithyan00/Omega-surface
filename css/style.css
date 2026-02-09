@@ -37,6 +37,7 @@ Table of Content:
 /*Color Variables*/
 /*=================== fonts ====================*/
 @import url("https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /* Medium Layout: 1280px */
@@ -704,7 +705,35 @@ button:hover {
 .side_menu .menu_right li ul li:hover a {
   color: #222222;
 }
+/* Change mobile menu bar color to white */
+.canvus_menu .toggle_icon span,
+.canvus_menu .toggle_icon span:before,
+.canvus_menu .toggle_icon span:after {
+  background: #ffffff !important;
+}
+/* Cross icon color when menu is open */
+.open .canvus_menu .toggle_icon span:before,
+.open .canvus_menu .toggle_icon span:after {
+  background: #000 !important; /* black cross */
+}
 
+
+
+/* Mobile Logo Only */
+.mobile-logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color:#fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* Hide mobile logo on desktop */
+@media (min-width: 992px) {
+  .mobile-logo-text {
+    display: none;
+  }
+}
 /* Home Banner Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
@@ -994,54 +1023,107 @@ button:hover {
 /*----------------------------------------------------*/
 /* Start Project Area css
 ============================================================================================ */
-.project-area {
-  padding-bottom: 120px;
+/* ================= FORCE PROJECT BANNER RESPONSIVE ================= */
+/* Mobile logo */
+.mobile-logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff; /* change to #000 if background is white */
+  text-decoration: none;
+  letter-spacing: 1px;
 }
-/* ===== Project Banner ===== */
 
+/* Hide mobile logo on desktop */
+@media (min-width: 992px) {
+  .mobile-logo-text {
+    display: none;
+  }
+}
 .project_banner_area {
   width: 100%;
-  height: 625px;
-  background: url("../img/banner/banner-b.jpg") center/cover no-repeat;
+  min-height: 100vh !important; /* FULL SCREEN on desktop */
+  background: url("../img/banner/banner-b.jpg") no-repeat center center;
+  background-size: cover !important;
   position: relative;
 }
 
 .project_banner_area .banner-overlay {
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  display: flex;
-  align-items: center;
+  min-height: 100vh !important;
+  background: rgba(0, 0, 0, 0.45) !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 /* LEFT aligned text like gallery */
 .project_banner_area .banner-content {
   color: #fff;
-  max-width: 600px;
+  max-width: 650px;
+  text-align: left !important;
 }
 
 .project_banner_area h1 {
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
   text-transform: uppercase;
 }
 
 .project_banner_area p {
-  font-size: 16px;
+  font-size: 18px;
   color: #ddd;
   margin-top: 10px;
 }
+/* ================= MOBILE FIX ================= */
 
-/* Responsive */
-@media (max-width: 768px) {
-  .project_banner_area {
-    height: 220px;
+/* Tablet */
+@media (max-width: 992px) {
+  .project_banner_area,
+  .project_banner_area .banner-overlay {
+    min-height: 60vh !important;
   }
 
   .project_banner_area h1 {
-    font-size: 28px;
+    font-size: 38px;
   }
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .project_banner_area,
+  .project_banner_area .banner-overlay {
+    min-height: 50vh !important;
+  }
+
+  .project_banner_area .banner-content {
+    padding: 0 15px;
+  }
+
+  .project_banner_area h1 {
+    font-size: 28px !important;
+  }
+
+  .project_banner_area p {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .project_banner_area,
+  .project_banner_area .banner-overlay {
+    min-height: 45vh !important;
+  }
+
+  .project_banner_area h1 {
+    font-size: 22px !important;
+  }
+
+  .project_banner_area p {
+    font-size: 13px;
+  }
+}
+
 
 @media (max-width: 991px) {
   .project-area {
@@ -1162,8 +1244,10 @@ button:hover {
 ============================================================================================ */
 /* Container & Header */
 .os-gallery-section {
-  padding: 100px 0;
   background-color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 60px;
+
 }
 
 .os-gallery-main-header {
@@ -1275,38 +1359,80 @@ button:hover {
   color: #111;
 }
 
-.counter_area .single_counter .thumb img {
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-.counter_area .single_counter .info-content h4 {
-  font-size: 36px;
-  font-weight: 600;
-  font-family: "Rajdhani", sans-serif;
-  margin-bottom: 0;
-}
-.counter_area .single_counter:hover {
-  background: #f5ca56;
-  color: #fff;
-  border: 1px solid transparent;
-}
-.counter_area .single_counter:hover .thumb img {
-  -webkit-filter: brightness(0) invert(1);
-  -moz-filter: brightness(0) invert(1);
-  -ms-filter: brightness(0) invert(1);
-  -o-filter: brightness(0) invert(1);
-  filter: brightness(0) invert(1);
-}
-.counter_area .single_counter:hover .info-content h4 {
-  color: #fff;
+
+
+.counter_section {
+    padding: 80px 0;
+    background: #ffffff;
+    font-family: 'Inter', sans-serif;
 }
 
-#about .counter_area .single_counter {
-  margin-right: 10px;
+.counter_area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 20px;
 }
 
+.single_counter {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 24px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+/* Icon Style */
+.single_counter .thumb i {
+    font-size: 45px; /* Icon size */
+    color: #f5ca56;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+    display: inline-block;
+}
+
+.single_counter h4 {
+    font-size: 38px;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.single_counter p {
+    font-size: 14px;
+    color: #666;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-top: 8px;
+}
+
+/* Hover Effects */
+.single_counter:hover {
+    transform: translateY(-15px);
+    background: #f5ca56;
+    border-color: #f5ca56;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.single_counter:hover h4, 
+.single_counter:hover p,
+.single_counter:hover .thumb i {
+    color: #ffffff; /* Everything turns white on hover */
+}
+
+.single_counter:hover .thumb i {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+    .counter_area {
+        grid-template-columns: 1fr;
+    }
+}
 /* Mobile View - EXACT SIZE FIX */
 @media (max-width: 991px) {
   .os-gallery-grid {
@@ -1542,6 +1668,7 @@ Start Blog Area css
 /* text center */
 .banner-content h2 {
   color: #f4b41a;
+  font-size:25px;
   max-width: 700px;
 }
 
@@ -1622,6 +1749,12 @@ Start Blog Area css
   text-decoration: none;
 }
 /*  */
+@media (max-width: 991px) {
+  .section-title p{
+    font-size: 25px;
+  }
+
+}
 
 /* Blog Structure */
 .blog-title {
@@ -4856,7 +4989,21 @@ h6 {
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
+/* Mobile logo text */
+.mobile-logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff; /* change color if needed */
+  text-decoration: none;
+  letter-spacing: 1px;
+}
 
+/* Hide mobile logo on desktop */
+@media (min-width: 992px) {
+  .mobile-logo-text {
+    display: none;
+  }
+}
 .desktop-header {
   position: fixed; /* or fixed if needed */
   top: 0;
@@ -4954,7 +5101,7 @@ h6 {
   height: 100%;
   object-fit: cover;
 }
-/* BLOG BANNER LIKE GALLERY */
+
 
 .omega-blog-banner {
   background: url("../img/banner/banner-b5.jpg") center/cover no-repeat;
@@ -5084,6 +5231,82 @@ h6 {
   border-radius: 2px;
 }
 /* --- tittle  End --- */
+@media (max-width: 576px) {
+  .about-omega-section {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    overflow: hidden;
+  }
+
+  .sticky-column {
+    height: auto;
+    display: block;
+  }
+
+ 
+  .tiles-grid-wrapper {
+    height: 290px; /* 180px-la irunthu 230px-ah mathirkken, ithu text-ah kila thallum */
+    width: 100%;
+    margin-bottom: 0px;
+    position: relative;
+    overflow: visible;
+  }
+
+  /* 2. Grid align panna translate-ah sync pannunga */
+  .tiles-list {
+    transform: translate(-50%, -45%) scale(0.48); 
+    grid-template: repeat(9, 11vmin) / repeat(9, 11vmin);
+    gap: 6px;
+    left: 50%;
+    top: 50%;
+  }
+
+  .content-column {
+    padding: 0 20px;
+    height: auto;
+  }
+
+  .about-content-box {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  /* 3. Innum space venum na intha margin-top-ah yethunga */
+  .about-content-box h1 {
+    font-size: 28px;
+    margin-top: 20px; /* 5px-la irunthu 20px-ah mathirukken */
+    line-height: 1.2;
+  }
+
+  .about-content-box p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .stat-box {
+    flex: 1 1 calc(45% - 10px); 
+    padding: 12px 8px;
+    min-width: 100px;
+  }
+
+  .stat-number {
+    font-size: 22px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+}
 /* --- Mission & Vision Styles --- */
 .mission-vision-section {
   padding: 50px 0;
@@ -5506,11 +5729,24 @@ h6 {
     padding: 0 20px;
   }
 }
+@media (max-width: 991px) {
+  /* Disable horizontal/vertical movement on mobile */
+  .animate-up, 
+  .animate-left {
+    transform: none !important; /* Forces the element to stay in its natural position */
+    transition: opacity 0.8s ease !important; /* Keeps the fade-in effect only */
+  }
+
+  /* Ensure the element is visible if the animation already triggered */
+  .appear {
+    transform: none !important;
+  }
+}
 /* ================= OUR VALUES ================= */
 
 .values-section {
   overflow: hidden;
-  padding: 80px 0;
+  /* padding: 80px 0; */
   margin-bottom: 30px;
   background: #fff;
 }
@@ -5706,6 +5942,19 @@ h6 {
   text-transform: uppercase;
   cursor: pointer;
 }
+@media (max-width: 991px) {
+  .cta-title {
+    font-size: 20px;
+  }
+  .sub_title_box{
+    font-size: 25px;
+    .cta-desc{
+       font-size: 15px;
+    }
+
+  } 
+}
+
 
 /*techincal feature*/
 .omega-tech-features-section {
@@ -5714,7 +5963,7 @@ h6 {
 }
 
 .omega-tech-main-title {
-  font-size: 45px;
+  font-size: 25px;
   font-weight: 500;
   color: #1a1a1a;
   margin-top: 15px;
@@ -5814,6 +6063,226 @@ h6 {
 .omega-tech-card:hover .omega-tech-img {
   transform: scale(1.1);
   filter: brightness(0.4) blur(1px);
+}
+
+/* ==================================================
+   teastimonial
+================================================== */
+
+/* Container Spacing */
+.os-testi-wrapper {
+     padding: 100px 0;
+    background: #fff;
+    font-weight: 800;
+}
+
+/* Sidebar Text */
+.os-testi-main-title {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #1a1a1a;
+}
+
+.os-testi-sub-text {
+    margin-top: 20px;
+    color: #777;
+    font-size: 15px;
+}
+
+.os-testi-slider-container {
+    position: relative;
+    padding-left: 100px;
+}
+
+.os-testi-yellow-shape {
+    position: absolute;
+    left: 0;
+    top: -30px;
+    width: 250px;
+    height: calc(100% + 60px);
+    background: #f5ca56;
+    z-index: 1;
+}
+
+.os-testi-nav-group {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.os-testi-nav-btn {
+    background: #0d5e52;
+    color: #fff;
+    border: none;
+    width: 45px;
+    height: 45px;
+    margin: 3px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.os-testi-nav-btn:hover {
+    background: #094038;
+}
+
+.os-testi-image-box {
+    position: relative;
+    z-index: 5;
+    box-shadow: 15px 15px 40px rgba(0,0,0,0.15);
+}
+
+.os-testi-image-box img {
+    width: 100% !important;
+    display: block;
+}
+
+.os-testi-feedback-box {
+    padding-left: 40px;
+}
+
+.os-testi-stars {
+    color: #f5ca56;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.os-testi-quote {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.os-testi-user-meta {
+    display: flex;
+    align-items: center;
+}
+
+.os-testi-icon-bg {
+    background: #f8f9fa;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    border-radius: 4px;
+    color: #0d5e52;
+}
+
+.os-testi-user-details h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.os-testi-user-details span {
+    font-size: 13px;
+    color: #aaa;
+}
+
+@media (max-width: 991px) {
+  /* Center the overall section text */
+  .os-testi-main-title {
+    font-size: 30px;
+  }
+  .os-testi-heading {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  /* Make the slider container relative for the yellow background */
+  .os-testi-slider-container {
+    position: relative;
+    padding-top: 20px;
+  }
+
+  /* Position the yellow box behind the image specifically for mobile */
+  .os-testi-yellow-shape {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-80%); /* Moves it slightly left of center to match design */
+    width: 200px;
+    height: 250px;
+    background-color: #ffb400; /* Use your exact yellow color */
+    z-index: 1;
+  }
+
+  /* Ensure the image sits on top and is centered */
+  .os-testi-image-box {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .os-testi-image-box img {
+    max-width: 280px; /* Adjust based on your preference */
+    border-radius: 0; 
+  }
+
+  /* Navigation buttons placement (the arrows) */
+  .os-testi-nav-group {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 3;
+  }
+
+  .os-testi-nav-btn {
+    background: #1a5d51; /* Dark green from image */
+    color: white;
+    border: none;
+    padding: 10px;
+  }
+
+  /* Feedback box styling */
+  .os-testi-feedback-box {
+    text-align: left;
+    padding: 0 15px;
+  }
+
+  .os-testi-stars {
+    color: #ffb400;
+    margin-bottom: 15px;
+  }
+
+  .os-testi-quote {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* Footer of the testimonial */
+  .os-testi-user-meta {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .os-testi-icon-bg {
+    background: #fff8e7;
+    padding: 15px;
+    margin-right: 15px;
+  }
+
+  /* The Orange Scroll-up Arrow at the bottom right */
+  .os-testi-wrapper {
+    position: relative;
+    padding: 10px;
+  }
 }
 /* ==================================================
    GALLERY PAGE – GRID, ANIMATION, GOLD BORDER

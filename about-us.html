@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="vendors/popup/magnific-popup.css" />
     <link rel="stylesheet" href="vendors/swiper/css/swiper.min.css" />
     <link rel="stylesheet" href="vendors/scroll/jquery.mCustomScrollbar.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -31,16 +32,37 @@
     <script>
       gsap.registerPlugin(ScrollTrigger);
 
-      gsap.to(".tiles-list", {
-        scrollTrigger: {
-          trigger: ".about-omega-section",
-          start: "top top", // Animation starts when section hits top
-          end: "bottom bottom", // Animation ends at section bottom
-          scrub: 1, // Connects scroll speed to animation speed
-        },
-        scale: 1.5, // Zoom in
-        rotation: 360, // Full rotation
-        ease: "none",
+      // MatchMedia create panrom (Desktop vs Mobile)
+      let mm = gsap.matchMedia();
+
+      // 1. Mobile & Tablet View (Zoom and Rotation kuraikiraom)
+      mm.add("(max-width: 991px)", () => {
+        gsap.to(".tiles-list", {
+          scrollTrigger: {
+            trigger: ".about-omega-section",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1,
+          },
+          scale: 0.5, // Mobile-la zoom level koraivaga irukkum
+          rotation: 60, // Rotation-um 360-la irunthu 90-ku koraichachu
+          ease: "none",
+        });
+      });
+
+      // 2. Desktop View (Neenga kodutha original settings)
+      mm.add("(min-width: 992px)", () => {
+        gsap.to(".tiles-list", {
+          scrollTrigger: {
+            trigger: ".about-omega-section",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1,
+          },
+          scale: 1.5, // Desktop zoom level
+          rotation: 360, // Desktop full rotation
+          ease: "none",
+        });
       });
     </script>
   </head>
@@ -183,34 +205,37 @@
 
     <!--================Canvus Menu Area =================-->
     <div class="canvus_menu">
-      <div class="container">
-        <div class="float-right">
-          <div class="toggle_icon" title="Menu Bar">
-            <span></span>
-          </div>
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Mobile Logo -->
+        <a href="index.html" class="mobile-logo-text">Omega Surface</a>
+
+        <!-- Menu Bar Icon -->
+        <div class="toggle_icon" title="Menu Bar">
+          <span></span>
         </div>
       </div>
     </div>
     <!--================End Canvus Menu Area =================-->
-<section class="omega-blog-banner">
-  <div class="omega-banner-overlay">
-    <div class="container">
-      <div class="omega-banner-text">
-        <h1>Design Stories & Insights</h1>
+    <section class="omega-blog-banner">
+      <div class="omega-banner-overlay">
+        <div class="container">
+          <div class="omega-banner-text">
+            <h1>Design Stories & Insights</h1>
 
-        <p>
-          Discover articles that reflect timeless aesthetics, evolving trends,
-          and meaningful stories shaped by creativity and experience.
-        </p>
+            <p>
+              Discover articles that reflect timeless aesthetics, evolving
+              trends, and meaningful stories shaped by creativity and
+              experience.
+            </p>
 
-        <a href="#blog" class="main_btn">
-          Explore Our Journal
-          <img src="img/next.png" alt="" />
-        </a>
+            <a href="#blog" class="main_btn">
+              Explore Our Journal
+              <!-- <img src="img/next.png" alt="" /> -->
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!--================About Area =================-->
     <section class="about-omega-section">
@@ -687,17 +712,16 @@
                           ><i class="fa fa-star"></i>
                         </div>
                         <p class="os-testi-quote">
-                          "Education is the foundation of change. By funding
-                          schools and training programs, we help children unlock
-                          their potential."
+                          “Trusted tile brand offering variety quality and
+                          dependable supply.”
                         </p>
                         <div class="os-testi-user-meta">
                           <div class="os-testi-icon-bg">
                             <i class="fa-solid fa-quote-right"></i>
                           </div>
                           <div class="os-testi-user-details">
-                            <h4>Alexander Bell</h4>
-                            <span>CEO, Founder</span>
+                            <h4>Ravi</h4>
+                            <span>Dealer</span>
                           </div>
                         </div>
                       </div>
@@ -709,7 +733,7 @@
                   <div class="row align-items-center">
                     <div class="col-md-5">
                       <div class="os-testi-image-box">
-                        <img src="img/about-2.png" alt="Client" />
+                        <img src="img/about-6.png" alt="Client" />
                       </div>
                     </div>
                     <div class="col-md-7">
@@ -720,17 +744,16 @@
                           ><i class="fa fa-star"></i>
                         </div>
                         <p class="os-testi-quote">
-                          "The premium finish of the floor tiles we purchased is
-                          incredible. Durable and elegant—exactly what our
-                          project needed."
+                          “Elegant tile collections enhancing spaces with
+                          balance and sophistication.”
                         </p>
                         <div class="os-testi-user-meta">
                           <div class="os-testi-icon-bg">
                             <i class="fa-solid fa-quote-right"></i>
                           </div>
                           <div class="os-testi-user-details">
-                            <h4>Sarah Jenkins</h4>
-                            <span>Architect</span>
+                            <h4>Priya Anand</h4>
+                            <span>Interior Stylist</span>
                           </div>
                         </div>
                       </div>
@@ -742,7 +765,7 @@
                   <div class="row align-items-center">
                     <div class="col-md-5">
                       <div class="os-testi-image-box">
-                        <img src="img/about-2.png" alt="Client" />
+                        <img src="img/about-7.png" alt="Client" />
                       </div>
                     </div>
                     <div class="col-md-7">
@@ -753,17 +776,16 @@
                           ><i class="fa fa-star"></i>
                         </div>
                         <p class="os-testi-quote">
-                          "Outstanding customer service and a vast collection.
-                          Omega Surface is now our go-to brand for all luxury
-                          developments."
+                          “Tiles engineered for strength accuracy and hassle
+                          free installation.”
                         </p>
                         <div class="os-testi-user-meta">
                           <div class="os-testi-icon-bg">
                             <i class="fa-solid fa-quote-right"></i>
                           </div>
                           <div class="os-testi-user-details">
-                            <h4>Robert Wilson</h4>
-                            <span>Property Developer</span>
+                            <h4>Suresh</h4>
+                            <span>Site Engineer</span>
                           </div>
                         </div>
                       </div>
@@ -843,16 +865,16 @@
               </div>
               <ul class="list social_icons">
                 <li>
-                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 </li>
               </ul>
             </aside>
