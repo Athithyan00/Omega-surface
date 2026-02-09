@@ -6140,3 +6140,213 @@ h6 {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+/* Container Spacing */
+.os-testi-wrapper {
+    padding: 100px 0;
+    background: #fff;
+}
+
+/* Sidebar Text */
+.os-testi-main-title {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #1a1a1a;
+}
+
+.os-testi-sub-text {
+    margin-top: 20px;
+    color: #777;
+    font-size: 15px;
+}
+
+/* Slider Layout */
+.os-testi-slider-container {
+    position: relative;
+    padding-left: 100px;
+}
+
+.os-testi-yellow-shape {
+    position: absolute;
+    left: 0;
+    top: -30px;
+    width: 250px;
+    height: calc(100% + 60px);
+    background: #f5ca56;
+    z-index: 1;
+}
+
+.os-testi-nav-group {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.os-testi-nav-btn {
+    background: #0d5e52;
+    color: #fff;
+    border: none;
+    width: 45px;
+    height: 45px;
+    margin: 3px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.os-testi-nav-btn:hover {
+    background: #094038;
+}
+
+/* Content Blocks */
+.os-testi-image-box {
+    position: relative;
+    z-index: 5;
+    box-shadow: 15px 15px 40px rgba(0,0,0,0.15);
+}
+
+.os-testi-image-box img {
+    width: 100% !important;
+    display: block;
+}
+
+.os-testi-feedback-box {
+    padding-left: 40px;
+}
+
+.os-testi-stars {
+    color: #f5ca56;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.os-testi-quote {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.os-testi-user-meta {
+    display: flex;
+    align-items: center;
+}
+
+.os-testi-icon-bg {
+    background: #f8f9fa;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    border-radius: 4px;
+    color: #0d5e52;
+}
+
+.os-testi-user-details h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.os-testi-user-details span {
+    font-size: 13px;
+    color: #aaa;
+}
+@media (max-width: 991px) {
+  /* Center the overall section text */
+  .os-testi-heading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  /* Make the slider container relative for the yellow background */
+  .os-testi-slider-container {
+    position: relative;
+    padding-top: 20px;
+  }
+
+  /* Position the yellow box behind the image specifically for mobile */
+  .os-testi-yellow-shape {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-80%); /* Moves it slightly left of center to match design */
+    width: 200px;
+    height: 250px;
+    background-color: #ffb400; /* Use your exact yellow color */
+    z-index: 1;
+  }
+
+  /* Ensure the image sits on top and is centered */
+  .os-testi-image-box {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .os-testi-image-box img {
+    max-width: 280px; /* Adjust based on your preference */
+    border-radius: 0; 
+  }
+
+  /* Navigation buttons placement (the arrows) */
+  .os-testi-nav-group {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 3;
+  }
+
+  .os-testi-nav-btn {
+    background: #1a5d51; /* Dark green from image */
+    color: white;
+    border: none;
+    padding: 10px;
+  }
+
+  /* Feedback box styling */
+  .os-testi-feedback-box {
+    text-align: left;
+    padding: 0 15px;
+  }
+
+  .os-testi-stars {
+    color: #ffb400;
+    margin-bottom: 15px;
+  }
+
+  .os-testi-quote {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* Footer of the testimonial */
+  .os-testi-user-meta {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .os-testi-icon-bg {
+    background: #fff8e7;
+    padding: 15px;
+    margin-right: 15px;
+  }
+
+  /* The Orange Scroll-up Arrow at the bottom right */
+  .os-testi-wrapper {
+    position: relative;
+  }
+}
