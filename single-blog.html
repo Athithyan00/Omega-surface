@@ -19,101 +19,69 @@
     <link rel="stylesheet" href="vendors/popup/magnific-popup.css" />
     <link rel="stylesheet" href="vendors/swiper/css/swiper.min.css" />
     <link rel="stylesheet" href="vendors/scroll/jquery.mCustomScrollbar.css" />
-    <!-- main css -->
-    <link rel="stylesheet" href="css/style.css" />
-    <style>
-      /* Blog Structure */
-      .blog-title {
-        font-size: 42px;
-        font-weight: 600;
-        letter-spacing: -0.5px;
-      }
-
-      .blog-subtitle {
-        font-size: 16px;
-        color: #777;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-
-      .blog-hero img {
-        border-radius: 6px;
-        height: 500px;
-      }
-
-      /* Content */
-      .blog-content {
-        font-size: 16px;
-        line-height: 1.9;
-        color: #444;
-      }
-
-      .blog-content h3 {
-        margin-top: 40px;
-        font-weight: 600;
-      }
-
-      .blog-content .lead {
-        font-size: 18px;
-        font-weight: 400;
-        color: #333;
-      }
-
-      /* Quote */
-      .blog-quote {
-        margin: 50px 0;
-        padding: 25px 30px;
-        background: #f7f7f7;
-        border-left: 4px solid #000;
-        font-style: italic;
-      }
-      .blog-point-content {
-        font-size: 17px;
-        line-height: 1.9;
-      }
-
-      .blog-points {
-        padding-left: 18px;
-        margin-top: 15px;
-      }
-
-      .blog-points li {
-        margin-bottom: 10px;
-        color: #444;
-      }
-
-      .blog-inline-img {
-        border-radius: 6px;
-        max-height: 340px;
-        object-fit: cover;
-      }
-      .luxury-points {
-        list-style: none;
-        padding-left: 0;
-        margin-top: 18px;
-      }
-
-      .luxury-points li {
-        display: flex;
-        align-items: flex-start;
-        gap: 14px;
-        margin-bottom: 14px;
-        font-size: 17px;
-        line-height: 1.8;
-        color: #2b2b2b;
-      }
-
-      .luxury-points i {
-        color: rgb(245, 202, 86); /* luxury champagne gold */
-        font-size: 12px;
-        margin-top: 8px;
-      }
-    </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .feature-icon-box {
+        padding: 30px;
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 15px;
+        transition: 0.3s;
+        height: 100%;
+      }
+      .feature-icon-box:hover {
+        border-color: #f5ca56;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+      .feature-icon-box i {
+        font-size: 2.5rem;
+        color: #f5ca56;
+        margin-bottom: 20px;
+        display: block;
+      }
+
+      /* Comparison Table Style */
+      .comparison-section {
+        background: #1a1a1a;
+        color: #fff;
+        padding: 80px 0;
+        border-radius: 40px;
+        margin: 60px 0;
+      }
+      .comp-card {
+        border-left: 2px solid rgba(245, 202, 86, 0.3);
+        padding-left: 20px;
+      }
+
+      /* Split content maari theriya */
+      .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin: 40px 0;
+      }
+      .surface-h3 {
+        font-size: 15px;
+      }
+      .surface-h5 {
+        font-size: 18px;
+      }
+      .surface-text {
+        font-size: 15px;
+      }
+
+      @media (max-width: 768px) {
+        .content-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
 
   <body id="about">
@@ -319,148 +287,197 @@
 
     <!--================Blog Area =================-->
     <!--================ Modern Blog Area =================-->
-    <section class="blog_area" style="padding-top: 20px">
+    <section class="blog_area">
       <div class="container">
-        <!-- Article Wrapper -->
-        <article class="row justify-content-center">
-          <div class="col-lg-10 col-xl-9">
-            <!-- Title Block -->
-            <header class="text-center mb-5">
-              <h1 class="blog-title">Modern Surface Design Trends</h1>
-              <p class="blog-subtitle">
-                Elevating architectural spaces with premium surface solutions
-              </p>
-            </header>
+        <header class="text-center mb-5" data-aos="fade-up">
+          <h1 class="blog-title">Advanced Surface Technology</h1>
+          <p class="blog-subtitle">
+            Durability, Precision & Architectural Excellence
+          </p>
+        </header>
 
-            <!-- Feature Image -->
-            <div class="blog-hero mb-5">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-7" data-aos="fade-right">
+            <p class="lead">
+              Omega Surface high-speed production techniques provide the most
+              efficient solutions in today’s construction industry. By reducing
+              manual labor and increasing production efficiency, we deliver
+              uniform quality suitable for homes, industries, and commercial
+              boundaries.
+            </p>
+            <h3>What makes our Surface Unique?</h3>
+            <p class="surface-h3">
+              Our materials are engineered using high-precision technology. The
+              entire manufacturing sequence—comprising material feeding,
+              precision layering, and final polishing—is fully automated to
+              eliminate human error and ensure a flawless, consistent finish
+              across every slab.High-precision automation allows for
+              breathtaking visual complexity by controlling mineral distribution
+              at a microscopic level to recreate intricate natural veining.
+            </p>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left">
+            <div class="img-wrapper">
               <img
                 src="img/blog/blog1.png"
-                alt="Modern Surface Design"
-                class="img-fluid w-100"
-                data-aos="fade-up"
-                data-aos-duration="1000"
+                alt="Machine Efficiency"
+                class="img-fluid rounded shadow"
               />
             </div>
+          </div>
+        </div>
 
-            <!-- Content -->
-            <div class="blog-content">
-              <p class="lead">
-                At Omega Surface, modern surface design goes beyond aesthetics.
-                It represents durability, sustainability, and architectural
-                intent.
-              </p>
+        <hr />
 
+        <div class="row my-5">
+          <div class="col-12 mb-4"><h2>Key Features & Benefits</h2></div>
+          <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-icon-box text-center">
+              <i class="fa-solid fa-gauge-high"></i>
+              <h4>High-Speed Finish</h4>
               <p>
-                From residential interiors to large-scale commercial projects,
-                surfaces define how a space is experienced. Clean lines, refined
-                textures, and long-lasting finishes are essential to
-                contemporary design.
-              </p>
-
-              <h3>Why Modern Surfaces Matter</h3>
-
-              <p>
-                High-quality surfaces improve usability, reduce maintenance, and
-                elevate visual impact. The right material transforms a structure
-                into a timeless environment.
-              </p>
-
-              <!-- Section 1 : Image Left - Text Right -->
-              <div class="row align-items-center my-5">
-                <div class="col-md-5">
-                  <img
-                    src="img/blog/blog-1-1.png"
-                    class="img-fluid blog-inline-img"
-                    alt="Premium Surface Material"
-                    data-aos="fade-right"
-                    data-aos-offset="100"
-                    data-aos-easing="ease-in-sine"
-                  />
-                </div>
-
-                <div class="col-md-7 blog-point-content">
-                  <p class="mb-3">
-                    Surface selection plays a critical role in defining
-                    architectural identity. A well-chosen surface enhances both
-                    visual appeal and functional performance.
-                  </p>
-
-                  <ul class="blog-points luxury-points">
-                    <li data-aos="fade-left">
-                      <i class="fa-solid fa-diamond"></i>Enhances durability and
-                      long-term usability
-                    </li>
-                    <li data-aos="fade-left">
-                      <i class="fa-solid fa-diamond"></i>Improves spatial
-                      aesthetics and material harmony
-                    </li>
-                    <li data-aos="fade-left">
-                      <i class="fa-solid fa-diamond"></i>Supports modern
-                      construction standards
-                    </li>
-                    <li data-aos="fade-left">
-                      <i class="fa-solid fa-diamond"></i>Reduces maintenance and
-                      operational costs
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- Section 2 : Text Left - Image Right -->
-              <div class="row align-items-center my-5">
-                <div class="col-md-7 blog-point-content">
-                  <p class="mb-3">
-                    Our design philosophy blends innovation with craftsmanship,
-                    delivering surfaces that align with modern lifestyles and
-                    architectural precision.
-                  </p>
-
-                  <ul class="blog-points luxury-points">
-                    <li data-aos="fade-right">
-                      <i class="fa-solid fa-diamond"></i>Engineered for
-                      high-performance environments
-                    </li>
-                    <li data-aos="fade-right">
-                      <i class="fa-solid fa-diamond"></i>Balanced textures and
-                      refined finishes
-                    </li>
-                    <li data-aos="fade-right">
-                      <i class="fa-solid fa-diamond"></i>Adaptable for
-                      residential and commercial spaces
-                    </li>
-                    <li data-aos="fade-right">
-                      <i class="fa-solid fa-diamond"></i>Designed to complement
-                      contemporary architecture
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="col-md-5">
-                  <img
-                    src="img/blog/blog-1-2.png"
-                    class="img-fluid blog-inline-img"
-                    alt="Architectural Surface Design"
-                  />
-                </div>
-              </div>
-
-              <!-- Highlight Quote -->
-              <blockquote class="blog-quote">
-                “Design is not just what it looks like — design is how it
-                works.”
-              </blockquote>
-
-              <p>
-                Explore Omega Surface collections to discover materials that
-                redefine modern construction and interior design.
+                Consistent output with minimal downtime. Deliver bulk orders for
+                large architectural projects easily.
               </p>
             </div>
           </div>
-        </article>
+          <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="feature-icon-box text-center">
+              <i class="fa-solid fa-microchip"></i>
+              <h4>PLC-Based Automation</h4>
+              <p>
+                Accurate and safe operation with modern control systems for
+                perfect surface uniformity.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="feature-icon-box text-center">
+              <i class="fa-solid fa-shield-halved"></i>
+              <h4>Strong & Durable</h4>
+              <p>
+                Corrosion-resistant, long-lasting, and ideal for both indoor and
+                outdoor luxury installations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comparison-section container p-5" data-aos="fade-up">
+          <div class="row">
+            <div class="col-12 mb-4">
+              <h2 class="text-white">Comparison with Traditional Methods</h2>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="comp-card">
+                <h4 style="color: #f5ca56">Omega Automated Surfaces</h4>
+                <p>
+                  Faster production, better accuracy, and higher profitability.
+                  Built with durable components for minimal maintenance.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="comp-card">
+                <h4 style="color: #f5ca56">Traditional Surfaces</h4>
+                <p>
+                  Relies on manual labor, prone to inconsistent finishes, and
+                  higher long-term maintenance costs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row my-5">
+          <div class="col-12 text-center mb-5">
+            <h2>Surface Applications Across Industries</h2>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up">
+            <div class="d-flex align-items-start">
+              <div class="mr-3">
+                <i class="fa-solid fa-city fa-2x text-warning"></i>
+              </div>
+              <div>
+                <h5 class="surface-h5">Construction Industry</h5>
+                <p class="surface-text">
+                  Used for boundary cladding, site protection, and luxury wall
+                  panels.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="d-flex align-items-start">
+              <div class="mr-3">
+                <i class="fa-solid fa-industry fa-2x text-warning"></i>
+              </div>
+              <div>
+                <h5>Industrial Premises</h5>
+                <p class="surface-text">
+                  Provides safety and chemical-resistant flooring for
+                  warehouses.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="d-flex align-items-start">
+              <div class="mr-3">
+                <i class="fa-solid fa-house-chimney fa-2x text-warning"></i>
+              </div>
+              <div>
+                <h5>Residential & Commercial</h5>
+                <p class="surface-text">
+                  Offers aesthetic and secure surfaces for homes, gardens, and
+                  parking areas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center mt-5 py-5 bg-light rounded">
+          <div class="col-lg-6">
+            <img
+              src="img/banner.jpg"
+              class="img-fluid rounded"
+              alt="Final Image"
+            />
+          </div>
+          <div class="col-lg-6 p-4">
+            <h3>Why Choose Omega?</h3>
+            <ul class="luxury-points">
+              <li>
+                <i class="fa-solid fa-circle-check"></i> Zero-error material
+                weaving
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> 50% Lower manpower cost
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> Higher profit margins
+                for developers
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> Low-noise operation &
+                energy efficient
+              </li>
+            </ul>
+            <a
+              href="contact.html"
+              class="btn btn-warning text-white font-weight-bold px-5 py-3 mt-4"
+              >ENQUIRE NOW</a
+            >
+          </div>
+        </div>
       </div>
     </section>
-
     <!--================ End Modern Blog Area =================-->
 
     <!--================Blog Area =================-->
