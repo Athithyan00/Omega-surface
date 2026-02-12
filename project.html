@@ -194,19 +194,22 @@
 <!--================ END PROJECT BANNER AREA =================-->
 
  <!--================ Start Project Area =================-->
-    <style>
+<style>
       .section_gap {
         padding: 80px 0;
       }
 
       .project-card {
         background: #fff;
-        padding: 20px;
+        padding: 15px; /* Reduced padding for 4-column fit */
         border-radius: 16px;
         text-align: center;
         height: 100%;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
 
       .project-card:hover {
@@ -215,7 +218,7 @@
 
       .project-img {
         width: 100%;
-        height: 300px; /* FIXED IMAGE SIZE */
+        height: 220px; /* Adjusted for 4x4 layout */
         overflow: hidden;
         border-radius: 14px;
         margin-bottom: 15px;
@@ -233,31 +236,38 @@
       }
 
       .project-card h4 {
-        font-size: 18px;
+        font-size: 16px; /* Slightly smaller for 4-column fit */
         margin-bottom: 10px;
         font-weight: 600;
       }
 
       .project-card p {
-        font-size: 14px;
+        font-size: 13px; /* Slightly smaller for 4-column fit */
         color: #666;
-        margin: 0;
+        margin-bottom: 15px;
       }
 
       .project-btn {
         display: inline-block;
-        padding: 10px 22px;
-        font-size: 14px;
+        padding: 8px 18px;
+        font-size: 13px;
         font-weight: 600;
         color: #fff;
         background: #f5ca56;
         border-radius: 30px;
         text-decoration: none;
         transition: all 0.3s ease;
+        margin-top: auto;
       }
       .project-btn:hover {
         color: black;
         background: #f7bf27;
+      }
+
+      @media (max-width: 992px) {
+        .project-img {
+          height: 180px;
+        }
       }
 
       @media (max-width: 768px) {
@@ -266,105 +276,146 @@
         }
       }
     </style>
-
     <section class="section_gap project-area">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
+          
+          <div class="col-lg-3 col-md-6 mb-4">
             <div class="project-card">
               <div class="project-img">
                 <img src="img/product/parking-tiles.png" alt="Parking Tiles" />
               </div>
               <h4>Parking Tiles</h4>
-              <p>
-                High-strength anti-skid tiles designed for heavy vehicle
-                traffic.
-              </p>
-              <a href="project-details.html?type=parking" class="project-btn"
-                >View Collection</a
-              >
+              <p>High-strength anti-skid tiles designed for heavy traffic.</p>
+              <a href="project-details.html?type=parking" class="project-btn">View Collection</a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6 mb-4">
             <div class="project-card">
               <div class="project-img">
                 <img src="img/product/cool-roof.png" alt="Cool Roof Tiles" />
               </div>
               <h4>Cool Roof Tiles</h4>
-              <p>
-                Heat-resistant tiles that reduce surface temperature naturally.
-              </p>
-
-              <a href="project-details.html?type=coolroof" class="project-btn"
-                >View Collection</a
-              >
+              <p>Heat-resistant tiles that reduce surface temperature.</p>
+              <a href="project-details.html?type=coolroof" class="project-btn">View Collection</a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6 mb-4">
             <div class="project-card">
               <div class="project-img">
-                <img
-                  src="img/product/elite-grano.png"
-                  alt="Elite Grano Collection"
-                />
+                <img src="img/product/elite-grano.png" alt="Elite Grano Collection" />
               </div>
               <h4>Elite Grano Collection</h4>
-              <p>
-                Premium grano tiles with elegant texture and lasting durability.
-              </p>
-              <a href="project-details.html?type=elitegrano" class="project-btn"
-                >View Collection</a
-              >
+              <p>Premium grano tiles with elegant texture and durability.</p>
+              <a href="project-details.html?type=elitegrano" class="project-btn">View Collection</a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6 mb-4">
             <div class="project-card">
               <div class="project-img">
                 <img src="img/product/outdoortiles.png" alt="Outdoor Tiles" />
               </div>
               <h4>Outdoor Tiles</h4>
               <p>Weather-resistant tiles ideal for gardens and open spaces.</p>
-              <a href="project-details.html?type=outdoor" class="project-btn"
-                >View Collection</a
-              >
+              <a href="project-details.html?type=outdoor" class="project-btn">View Collection</a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="project-card">
-              <div class="project-img">
-                <img
-                  src="img/product/full-body-tiles.png"
-                  alt="Full Body Tiles"
-                />
-              </div>
-              <h4>Full Body Tiles</h4>
-              <p>
-                Heavy-duty tiles suitable for commercial and high-traffic areas.
-              </p>
-              <a href="project-details.html?type=fullbody" class="project-btn"
-                >View Collection</a
-              >
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6 mb-4">
             <div class="project-card">
               <div class="project-img">
                 <img src="img/product/outdoortiles2.png" alt="Outdoor Tiles" />
               </div>
               <h4>Exterior Tiles</h4>
-              <p>
-                Durable anti-slip tiles for exterior and landscape applications.
-              </p>
-              <a href="project-details.html?type=landscape" class="project-btn"
-                >View Collection</a
-              >
+              <p>Durable anti-slip tiles for landscape applications.</p>
+              <a href="project-details.html?type=landscape" class="project-btn">View Collection</a>
             </div>
           </div>
+
+         <div class="col-lg-3 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="img/product/full-body-tiles.png" alt="Full Body Tiles" />
+              </div>
+              <h4>Full Body Tiles</h4>
+              <p>Heavy-duty tiles suitable for commercial areas.</p>
+              <a href="project-details.html?type=fullbody" class="project-btn">View Collection</a>
+            </div>
+          </div>
+
+           <div class="col-lg-3 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="img/product/step.webp" alt="StepRise Series" />
+              </div>
+              <h4>StepRise Series</h4>
+              <p>Engineered for high-traffic environments and longevity.</p>
+              <a href="project-details.html?type=stepriser" class="project-btn">View Collection</a>
+            </div>
+          </div>
+
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="img/product/wooden.jpg" alt="WoodScape Tiles" />
+              </div>
+              <h4>WoodScape Tiles</h4>
+              <p>Maximum resistance for demanding industrial use.</p>
+              <a href="project-details.html?type=woodfinish" class="project-btn">View Collection</a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="img/product/decor.jpg" alt="Heritage Decor Tiles" />
+              </div>
+              <h4>Heritage Decor Tiles</h4>
+              <p>Elegant finish combined with extreme durability.</p>
+              <a href="project-details.html?type=moroccan" class="project-btn">View Collection</a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="img/product/mirror.jpg" alt="Mirror Finish" />
+              </div>
+              <h4>Mirror Finish</h4>
+              <p>Contemporary designs for architectural excellence.</p>
+              <a href="project-details.html?type=highgloss" class="project-btn">View Collection</a>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="img/product/steprise.jpg" alt="Full Body Tiles" />
+              </div>
+              <h4>Heavy Duty Series</h4>
+              <p>Built to withstand the toughest conditions.</p>
+              <a href="project-details.html?type=industrial" class="project-btn">View Collection</a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="img/product/swimming.jpg" alt="Swimming pool Tiles" />
+              </div>
+              <h4>Swimming pool tiles</h4>
+              <p>Sleek and stylish options for city living.</p>
+              <a href="project-details.html?type=swimmingPool"class="project-btn">View Collection</a>
+            </div>
+          </div>
+
+         
+          
+
         </div>
       </div>
     </section>
