@@ -425,7 +425,7 @@
 
           <div class="wcu-bento-grid">
             <div
-              class="grid-item green-card animate-left"
+              class="grid-item green-card animate-up"
               style="transition-delay: 0.1s"
             >
               <div class="stars">★★★★★</div>
@@ -448,7 +448,7 @@
             </div>
 
             <div
-              class="grid-item img-card animate-left"
+              class="grid-item img-card animate-down"
               style="transition-delay: 0.2s"
             >
               <img src="./img/about-3.png" alt="Tile Surface" />
@@ -462,7 +462,7 @@
             </div>
 
             <div
-              class="grid-item dark-card animate-left"
+              class="grid-item dark-card animate-down"
               style="transition-delay: 0.4s"
             >
               <h3 class="stat-num-box">500+</h3>
@@ -470,7 +470,7 @@
             </div>
 
             <div
-              class="grid-item studio-card animate-left"
+              class="grid-item studio-card animate-up"
               style="transition-delay: 0.5s"
             >
               <h3 class="brand-title">Omega</h3>
@@ -798,70 +798,64 @@
     </section>
     <!--================ end testimonial start=================-->
     <!--================ start footer Area  =================-->
-    <footer class="footer_area omega_footer section_gap">
+    
+    <footer class="footer_area">
       <div class="container">
-        <div class="row footer_inner">
-          <div class="col-lg-3 col-sm-6">
+        <div class="row footer_inner gy-4">
+          <!-- ABOUT -->
+          <div class="col-lg-3 col-md-6">
             <aside class="f_widget ab_widget">
               <div class="f_title">
-                <h3>Omega</h3>
+                <h3>Omega Surface</h3>
               </div>
               <p>
                 Omega provides top-tier creative solutions and innovative growth
                 strategies.
               </p>
-              <p class="copyright">
-                Copyright @2026 &copy;
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                OmegaSurface|Developed by paletteproduction
-              </p>
             </aside>
           </div>
 
-          <div class="col-lg-2 col-sm-6">
+          <!-- ADDRESS -->
+          <div class="col-lg-3 col-md-6">
+            <aside class="f_widget link_widget">
+              <div class="f_title">
+                <h3>Contact</h3>
+              </div>
+              <ul class="list">
+                <li>
+                  Tulasi Tiles 74/1, Coimbatore By Pass Road, Velayuthampalayam,
+                  Avinashi, Tamil Nadu 641654
+                </li>
+                <li>tulasitiles@gmail.com</li>
+                <li>+91 98430 69220</li>
+              </ul>
+            </aside>
+          </div>
+
+          <!-- QUICK LINKS -->
+          <div class="col-lg-3 col-md-6">
             <aside class="f_widget link_widget">
               <div class="f_title">
                 <h3>Quick Links</h3>
               </div>
               <ul class="list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="project.html">Product</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
             </aside>
           </div>
 
-          <div class="col-lg-4 col-sm-6">
-            <aside class="f_widget gallery_widget">
-              <div class="f_title">
-                <h3>Gallery</h3>
-              </div>
-              <div class="insta_feed">
-                <div class="gallery_item">
-                  <img src="./img/about-4.png" alt="Gallery 1" />
-                </div>
-                <div class="gallery_item">
-                  <img src="img/about-7.png" alt="Gallery 2" />
-                </div>
-                <div class="gallery_item">
-                  <img src="img/about-3.png" alt="Gallery 3" />
-                </div>
-                <div class="gallery_item">
-                  <img src="img/about-2.png" alt="Gallery 4" />
-                </div>
-              </div>
-            </aside>
-          </div>
-
-          <div class="col-lg-3">
+          <!-- SOCIAL -->
+          <div class="col-lg-3 col-md-6">
             <aside class="f_widget social_widget">
               <div class="f_title">
                 <h3>Follow Us</h3>
               </div>
-              <ul class="list social_icons">
+
+              <ul class="social_icons">
                 <li>
                   <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 </li>
@@ -876,10 +870,19 @@
                 </li>
               </ul>
             </aside>
+
+            <p class="copyright">
+              ©
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              OmegaSurface | Developed by paletteproduction
+            </p>
           </div>
         </div>
       </div>
     </footer>
+
     <!--================ End footer Area  =================-->
 
     <!-- Optional JavaScript -->
@@ -901,6 +904,7 @@
     <script src="vendors/scroll/jquery.mCustomScrollbar.js"></script>
     <script src="js/theme.js"></script>
 
+    <!-- rotation animation -->
     <script>
       window.addEventListener("load", function () {
         gsap.registerPlugin(ScrollTrigger);
@@ -947,6 +951,8 @@
         ease: "power3.out",
       });
     </script>
+
+    <!-- why choose us -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const observerOptions = {
@@ -966,16 +972,17 @@
         elements.forEach((el) => observer.observe(el));
       });
     </script>
+
+    <!--  our values   -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const observerOptions = {
-          threshold: 0.2, // 20% section theriyumbodhu trigger aagum
+          threshold: 0.2,
         };
 
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              // Ellaa cards-kum active class add pannum
               entry.target.querySelectorAll(".omega-reveal").forEach((card) => {
                 card.classList.add("active");
               });
@@ -983,13 +990,14 @@
           });
         }, observerOptions);
 
-        // Section-ah observe pannuvom
         const valuesSection = document.querySelector(".values-section");
         if (valuesSection) {
           observer.observe(valuesSection);
         }
       });
     </script>
+
+    <!-- testimonial -->
     <script>
       $(document).ready(function () {
         var osCarousel = $(".os-testimonial-carousel");
