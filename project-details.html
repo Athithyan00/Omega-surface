@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="vendors/linericon/style.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
     <link rel="stylesheet" href="vendors/animate-css/animate.css" />
@@ -186,15 +188,15 @@
 /* --- 1. CORE STYLE --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { 
-  font-family: "Poppins", sans-serif; 
-  background-color: #ffffff; 
-  color: #444; 
-  overflow-x: hidden;
+    font-family: "Poppins", sans-serif; 
+    background-color: #ffffff; 
+    color: #444; 
+    overflow-x: hidden;
 }
 :root { 
-  --gold: #f5ca56; 
-  --dark: #1a2a1b; 
-  --light: #f8f9fa; 
+    --gold: #f5ca56; 
+    --dark: #1a2a1b; 
+    --light: #f8f9fa; 
 }
 
 /* --- 2. BANNER --- */
@@ -217,24 +219,19 @@ body {
   border-radius: 15px; 
   box-shadow: 0 12px 35px rgba(0,0,0,0.06);
   border: 1px solid #f1f1f1;
-  height: 100%;           
+    height: 100%;
 }
 
 /* Spec item layout */
-.spec-item { 
-  display: flex; 
-  align-items: flex-start;   /* 🔥 CHANGED from center */
-  margin-bottom: 20px; 
-}
-
+.spec-item { display: flex; margin-bottom: 20px; }
 /* ICON BOX */
 .spec-icon-box { 
   min-width: 42px; 
   height: 42px; 
   background: #fff9e6; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
   border-radius: 10px; 
   margin-right: 14px; 
   border: 1px solid #fcebb6;
@@ -247,7 +244,7 @@ body {
 }
 
 /* Title alignment fix */
-.spec-content h5 {
+.spec-content h5 { 
   margin-top: 2px;
   color:#f5ca56   
 }
@@ -257,11 +254,11 @@ body {
 .app-section { padding: 60px 0; background: var(--light); }
 
 .app-card { 
-  background: #fff; 
+    background: #fff; 
   padding: 28px 18px; 
-  text-align: center; 
-  height: 100%; 
-  border-right: 1px solid #eee; 
+    text-align: center; 
+    height: 100%; 
+    border-right: 1px solid #eee; 
   transition: 0.35s ease; 
 }
 
@@ -340,45 +337,63 @@ body {
       </div>
     </section>
 
-    <section class="feature_section py-5">
-      <div class="container py-lg-5">
-        <div class="row">
-          <div class="col-lg-7 pr-lg-5">
-            <h2 id="productTitle" class="display-5 font-weight-bold mb-4" style="color: var(--dark);"></h2>
-            <div id="productIntro" class="text-muted" style="font-size: 1.1rem; line-height: 2; text-align: justify;"></div>
-            <div class="mt-5">
-              <a href="https://wa.me/919843069220" class="btn-whatsapp shadow-lg">
-                <i class="fa fa-whatsapp mr-2"></i> Inquiry via WhatsApp
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-5 mt-5 mt-lg-0">
-            <div class="spec-card">
-              <div class="spec-item">
-                <div class="spec-icon-box"><i class="fa fa-file-text-o"></i></div>
-                <div class="spec-content"><h5>Overview</h5><p id="sideDesc"></p></div>
-              </div>
-              <div class="spec-item">
-                <div class="spec-icon-box"><i class="fa fa-arrows-alt"></i></div>
-                <div class="spec-content"><h5>Dimensions</h5><p id="sideSize"></p></div>
-              </div>
-              <div class="spec-item">
-                <div class="spec-icon-box"><i class="fa fa-th-large"></i></div>
-                <div class="spec-content"><h5>Thickness</h5><p id="sideThickness"></p></div>
-              </div>
-              <div class="spec-item">
-                <div class="spec-icon-box"><i class="fa fa-shield"></i></div>
-                <div class="spec-content"><h5>Safety Standard</h5><p id="sideSafety"></p></div>
-              </div>
-              <div class="spec-item">
-                <div class="spec-icon-box"><i class="fa fa-magic"></i></div>
-                <div class="spec-content"><h5>Aesthetics</h5><p id="sideFinish"></p></div>
-              </div>
-            </div>
-          </div>
+  <section class="feature_section py-5">
+  <div class="container py-lg-5">
+    <div class="row">
+
+      <div class="col-lg-7 pr-lg-5">
+        <h2 id="productTitle" class="display-5 font-weight-bold mb-4" style="color: var(--dark);"></h2>
+        <div id="productIntro" class="text-muted" style="font-size: 1.2rem; line-height: 1.5; text-align: justify;"></div>
+
+        <div class="mt-5">
+          <a href="https://wa.me/919843069220" class="btn-whatsapp shadow-lg">
+            <i class="fa fa-whatsapp mr-2"></i> Inquiry via WhatsApp
+          </a>
         </div>
       </div>
-    </section>
+
+      <div class="col-lg-5 mt-5 mt-lg-0">
+        <div class="spec-card">
+
+          <div class="spec-item">
+            <div class="spec-icon-box"><i class="fa fa-file-text-o"></i></div>
+            <div class="spec-content">
+              <h5>Overview</h5>
+              <p id="sideDesc"></p>
+            </div>
+          </div>
+
+          <div class="spec-item">
+            <div class="spec-icon-box"><i class="fa fa-arrows-alt"></i></div>
+            <div class="spec-content">
+              <h5>Dimensions</h5>
+              <p id="sideSize"></p>
+            </div>
+          </div>
+
+          <div class="spec-item">
+            <div class="spec-icon-box"><i class="fa fa-th-large"></i></div>
+            <div class="spec-content">
+              <h5>Thickness</h5>
+              <p id="sideThickness"></p>
+            </div>
+          </div>
+
+          <div class="spec-item">
+            <div class="spec-icon-box"><i class="fa fa-shield"></i></div>
+            <div class="spec-content">
+              <h5>Safety Standard</h5>
+              <p id="sideSafety"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <section class="app-section">
       <div class="container">
@@ -396,235 +411,235 @@ body {
 
     <script>
       const data = {
-        parking: {
-          bannerTitle: "Industrial <span style='color:#f5ca56'>Parking</span>",
-          image: "img/product/parking-tiles.png",
-          title: "High-Endurance Parking Solutions",
-          desc: "Engineered for maximum load-bearing capacity and extreme weather resilience.",
-          intro: "Our Heavy Duty Parking Tiles represent the pinnacle of industrial ceramic engineering. Specifically developed to withstand the immense pressure of SUVs, heavy trucks, and constant vehicular movement, these tiles undergo a high-pressure hydraulic pressing process. This ensures a dense, vitrified body with near-zero porosity, making them immune to oil stains, chemical leaks, and heavy impact. Designed with an advanced R11-rated anti-skid texture, they provide absolute safety even in monsoon conditions. Whether it's a luxury residential driveway or a high-traffic commercial garage, these tiles maintain their structural integrity and surface finish for decades.",
-          sideDesc: "Industrial-grade vitrified tiles for extreme vehicular loads.",
-          sideSize: "400x400mm & 300x300mm Formats",
-          sideThickness: "12mm to 16mm Industrial Strength",
-          sideSafety: "R11 Anti-Skid Surface | High Load Bearing",
-          sideFinish: "Punch / Matte / Deep Groove Texture",
-          apps: [
-            { title: "Public Garages", icon: "fa-car", desc: "Resistant to tire friction and fuel spills." },
-            { title: "Driveways", icon: "fa-road", desc: "Adds aesthetic value with rugged durability." },
-            { title: "Warehouses", icon: "fa-building", desc: "Supports heavy machinery and forklifts." },
-            { title: "Petrol Pumps", icon: "fa-tint", desc: "Prevents hazardous fuel absorption." }
-          ],
-          gallery: ["img/product/parking1.png", "img/product/parking2.png", "img/product/parking3.png"]
-        },
-        coolroof: {
-          bannerTitle: "Solar <span style='color:#f5ca56'>Cool Roof</span>",
-          image: "img/product/cool-roof.png",
-          title: "Thermal Reflective Roofing Tech",
-          desc: "High Solar Reflective Index (SRI) tiles to naturally lower building temperatures.",
-          intro: "Experience the next generation of climate-control architecture with our Cool Roof Terminal Tiles. These tiles are engineered with specialized minerals that reflect up to 90% of solar radiation back into the atmosphere. By preventing the concrete slab from absorbing thermal energy, these tiles can reduce indoor temperatures by 10°C to 15°C. This significantly lowers air conditioning costs and reduces the carbon footprint of the building. Beyond temperature control, the UV-resistant coating protects the building's structural slab from thermal expansion cracks, ensuring a leak-proof and long-lasting rooftop for your property.",
-          sideDesc: "Advanced solar reflective tiles for thermal management.",
-          sideSize: "300x300mm Lightweight Profile",
-          sideThickness: "8mm - 10mm (Slab-Safe)",
-          sideSafety: "High SRI Index | UV Resistant | Eco-Friendly",
-          sideFinish: "Ultra White Reflective Matte",
-          apps: [
-            { title: "Residential", icon: "fa-home", desc: "Keep top floors cool naturally." },
-            { title: "Terraces", icon: "fa-sun-o", desc: "Perfect for rooftop seating and gardens." },
-            { title: "Factories", icon: "fa-industry", desc: "Improves indoor working conditions." },
-            { title: "Cold Storage", icon: "fa-snowflake-o", desc: "Helps maintain low internal temps." }
-          ],
-          gallery: ["img/product/cool1.png", "img/product/cool2.png", "img/product/cool3.png"]
-        },
-        elitegrano: {
-      bannerTitle: "Elite <span style='color:#f5ca56'>Grano</span>",
-      image: "img/product/elite-grano.png",
-      title: "Premium Grano Series",
-      desc: "The perfect fusion of natural stone aesthetics and modern engineering—Elite Grano offers a slip-resistant, stain-proof, and ultra-stylish flooring solution for premium spaces.",
-      intro: "The Elite Grano collection is a fusion of high-strength aggregates and sophisticated design. Each tile undergoes a specialized polishing process to achieve a subtle sheen while maintaining superior grip. Highly recommended for premium commercial projects and luxury residential entrances.",
+     parking: {
+    bannerTitle: "Industrial <span style='color:#f5ca56'>Parking</span>",
+    image: "img/product/parking-tiles.png",
+    title: "Heavy Duty Parking Tiles",
+    desc: "Our parking tiles are engineered for high load-bearing areas such as driveways, garages, and commercial parking spaces. They offer excellent resistance to oil stains, heavy vehicle pressure, and extreme weather conditions. The anti-skid surface ensures safety in wet and dry conditions while maintaining long-lasting durability.",
+    intro: "Our Heavy Duty Parking Tiles represent the pinnacle of industrial ceramic engineering. Specifically developed to withstand the immense pressure of SUVs, heavy trucks, and constant vehicular movement, these tiles undergo a high-pressure hydraulic pressing process. This ensures a dense, vitrified body with near-zero porosity, making them immune to oil stains, chemical leaks, and heavy impact. Designed with an advanced R11-rated anti-skid texture, they provide absolute safety even in monsoon conditions. Whether it's a luxury residential driveway or a high-traffic commercial garage, these tiles maintain their structural integrity and surface finish for decades.",
+    sideDesc: "Industrial-grade vitrified tiles for extreme vehicular loads.",
+    sideSize: "400x400mm & 300x300mm Formats",
+    sideThickness: "12mm to 16mm Industrial Strength",
+    sideSafety: "R11 Anti-Skid Surface | High Load Bearing",
+    sideFinish: "Punch / Matte / Deep Groove Texture",
+    apps: [
+      { title: "Public Garages", icon: "fa-car", desc: "Resistant to tire friction and fuel spills." },
+      { title: "Driveways", icon: "fa-road", desc: "Adds aesthetic value with rugged durability." },
+      { title: "Warehouses", icon: "fa-building", desc: "Supports heavy machinery and forklifts." },
+      { title: "Petrol Pumps", icon: "fa-tint", desc: "Prevents hazardous fuel absorption." }
+    ],
+    gallery: ["img/product/parking1.png", "img/product/parking2.png", "img/product/parking3.png"]
+  },
+       coolroof: {
+    bannerTitle: "Solar <span style='color:#f5ca56'>Cool Roof</span>",
+    image: "img/product/cool-roof.png",
+    title: "Cool Roof Reflective Tiles",
+    desc: "Cool roof tiles are designed to reflect solar heat and reduce indoor temperatures naturally. These tiles improve energy efficiency, reduce cooling costs, and protect roof slabs from thermal cracks. Ideal for residential and industrial rooftops, they provide durability, UV resistance, and long-term thermal performance.",
+    intro: "Experience the next generation of climate-control architecture with our Cool Roof Terminal Tiles. These tiles are engineered with specialized minerals that reflect up to 90% of solar radiation back into the atmosphere. By preventing the concrete slab from absorbing thermal energy, these tiles can reduce indoor temperatures by 10°C to 15°C. This significantly lowers air conditioning costs and reduces the carbon footprint of the building. Beyond temperature control, the UV-resistant coating protects the building's structural slab from thermal expansion cracks, ensuring a leak-proof and long-lasting rooftop for your property.",
+    sideDesc: "Advanced solar reflective tiles for thermal management.",
+    sideSize: "300x300mm Lightweight Profile",
+    sideThickness: "8mm - 10mm (Slab-Safe)",
+    sideSafety: "High SRI Index | UV Resistant | Eco-Friendly",
+    sideFinish: "Ultra White Reflective Matte",
+    apps: [
+      { title: "Residential", icon: "fa-home", desc: "Keep top floors cool naturally." },
+      { title: "Terraces", icon: "fa-sun-o", desc: "Perfect for rooftop seating and gardens." },
+      { title: "Factories", icon: "fa-industry", desc: "Improves indoor working conditions." },
+      { title: "Cold Storage", icon: "fa-snowflake-o", desc: "Helps maintain low internal temps." }
+    ],
+    gallery: ["img/product/cool1.png", "img/product/cool2.png", "img/product/cool3.png"]
+  },
+       elitegrano: {
+    bannerTitle: "Elite <span style='color:#f5ca56'>Grano</span>",
+    image: "img/product/elite-grano.png",
+    title: "Elite Grano Premium Tiles",
+    desc: "Elite Grano tiles combine natural stone aesthetics with modern vitrified technology. They offer high strength, slip resistance, and a premium surface finish suitable for luxury homes and commercial spaces. These tiles are easy to maintain and designed for high foot traffic areas.",
+    intro: "The Elite Grano collection is a fusion of high-strength aggregates and sophisticated design. Each tile undergoes a specialized polishing process to achieve a subtle sheen while maintaining superior grip. Highly recommended for premium commercial projects and luxury residential entrances.",
       // Mapping your custom fields to the HTML IDs
-      sideDesc: "Aggregated stone-finish premium vitrified series.",
-      sideSize: "600x600mm & 400x400mm | Precision Rectified",
-      sideThickness: "10mm - 12mm High Density",
-      sideSafety: "High Abrasion Resistance (PEI V) | Scratch-proof",
-      sideFinish: "Subtle Sheen / Polished Grip",
-      apps: [
-        { title: "Luxury Villas", icon: "fa-university", desc: "Adds a grand look to villa entrances." },
-        { title: "Shopping Malls", icon: "fa-shopping-bag", desc: "Built for massive daily footfall and trolleys." },
+    sideDesc: "Aggregated stone-finish premium vitrified series.",
+    sideSize: "600x600mm & 400x400mm | Precision Rectified",
+    sideThickness: "10mm - 12mm High Density",
+    sideSafety: "High Abrasion Resistance (PEI V) | Scratch-proof",
+    sideFinish: "Subtle Sheen / Polished Grip",
+    apps: [
+      { title: "Luxury Villas", icon: "fa-university", desc: "Adds a grand look to villa entrances." },
+      { title: "Shopping Malls", icon: "fa-shopping-bag", desc: "Built for massive daily footfall and trolleys." },
         { title: "Luxury Hotels", icon: "fa-bed", desc: "Aesthetic appeal with easy-to-clean hygiene." },
-        { title: "Corporate Offices", icon: "fa-briefcase", desc: "Modern and professional look for lobbies." }
-      ],
-      gallery: ["img/product/grano1.png", "img/product/grano2.png", "img/product/grano3.png"]
-    },
-    outdoor: {
-      bannerTitle: "Outdoor <span style='color:#f5ca56'>Series</span>",
-      image: "img/product/outdoortiles.png",
-      title: "Exterior Tiles",
-      desc: "Ultra-durable weatherproof tiles designed to withstand extreme UV rays and heavy rainfall without fading or cracking.",
-      intro: "Specifically engineered to withstand harsh weather, UV rays, and moisture. Our Outdoor Series features deep-punch textures providing exceptional grip, making them the safest choice for wet exterior areas like garden walkways and swimming pool decks.",
-      sideDesc: "Weatherproof tiles for gardens and patios.",
-      sideSize: "400x400mm Format",
-      sideThickness: "10mm - 12mm Deep Punch",
-      sideSafety: "Anti-Slip R12 Texture | UV Stable Pigments",
-      sideFinish: "Stone, Rock, and Slate Rustic Finishes",
-      apps: [
-        { title: "Gardens", icon: "fa-leaf", desc: "Textured finishes that blend with nature." },
-        { title: "Walkways", icon: "fa-map-signs", desc: "Safe, slip-free paths in all weather." },
-        { title: "Pool Sides", icon: "fa-life-ring", desc: "High-grip even in wet pool areas." },
-        { title: "Open Patios", icon: "fa-coffee", desc: "Durable lounge space that is easy to wash." }
-      ],
-      gallery: ["img/product/ot1.png", "img/product/ot2.png", "img/product/ot3.png"]
-    },
-        fullbody: {
-          bannerTitle: "Full Body <span style='color:#f5ca56'>Vitrified</span>",
-          image: "img/product/full-body-tiles.png",
-          title: "Technical Full Body Series",
-          desc: "Unmatched durability where the surface and core are identical.",
-          intro: "Full Body tiles are the ultimate choice for high-traffic environments like airports, malls, and industrial kitchens. Unlike glazed tiles, the color and pattern run through the entire thickness of the tile. This means even if the surface is chipped or worn down over years of heavy use, the appearance remains unchanged. These tiles are fired at exceptionally high temperatures, resulting in a rock-solid material that is resistant to acids, chemicals, and extreme abrasion. It is a one-time investment for a lifetime of service in the most demanding environments.",
-          sideDesc: "Technical tiles with uniform color throughout.",
-          sideSize: "600x600mm | 600x1200mm",
-          sideThickness: "10mm - 12mm High Density",
-          sideSafety: "Acid Resistant | Zero Abrasion",
-          sideFinish: "Technical Matte / Anti-Slip",
-          apps: [
-            { title: "Factories", icon: "fa-cogs", desc: "Vibration and impact resistant." },
-            { title: "Kitchens", icon: "fa-cutlery", desc: "Hygienic and highly stain resistant." },
-            { title: "Malls", icon: "fa-shopping-bag", desc: "Handles high daily foot traffic." },
-            { title: "Showrooms", icon: "fa-eye", desc: "Professional look, industrial strength." }
-          ],
-          gallery: ["img/product/fb1.jpg", "img/product/fb2.jpg", "img/product/fb3.jpg"]
-        },
-        landscape: {
-          bannerTitle: "Landscape <span style='color:#f5ca56'>Special</span>",
-          image: "img/product/outdoortiles2.png",
-          title: "Exterior Landscape & Decking",
-          desc: "Rustic textures meet modern durability for all outdoor spaces.",
-          intro: "Bring nature to your doorstep with our Landscape & Exterior series. These tiles replicate the organic feel of natural stone and rustic minerals while offering the superior performance of vitrified material. Equipped with a high-friction surface, they ensure safety in porches, garden walkways, and balconies. They are resistant to moss growth, fading under direct sunlight (UV stable), and are incredibly easy to clean compared to natural stone. Elevate your exterior architecture with surfaces that are beautiful, tough, and weather-resilient.",
-          sideDesc: "Weather-resistant tiles with natural textures.",
-          sideSize: "Multi-size Formats for Patterns",
-          sideThickness: "10mm to 12mm",
-          sideSafety: "High Traction | UV Proof | Moss Resistant",
-          sideFinish: "Natural Mineral / Rustic Grit",
-          apps: [
-            { title: "Gardens", icon: "fa-leaf", desc: "Pathways and decorative borders." },
-            { title: "Porches", icon: "fa-columns", desc: "Safe and grand entry points." },
-            { title: "Swimming Decks", icon: "fa-tint", desc: "Slip-resistant wet outdoor zones." },
-            { title: "Plazas", icon: "fa-users", desc: "Durable for public gathering areas." }
-          ],
-          gallery: ["img/product/et1.png", "img/product/et2.png", "img/product/et3.png"]
-        },
-        stepriser: {
-          bannerTitle: "Ready <span style='color:#f5ca56'>Steps</span>",
-          image: "img/product/step.webp",
-          title: "Precision Step & Riser Series",
-          desc: "Pre-finished, bull-nosed staircase solutions for zero wastage.",
-          intro: "Our Step & Riser collection is a revolution in staircase design. These are ready-to-install tiles featuring factory-finished bull-nose edges for safety. The surface includes scientifically placed grooves to provide maximum grip, preventing slips. By using our pre-cut sizes, you achieve a seamless, professional look with uniform joints. Available in a variety of wood and stone finishes, they eliminate messy on-site grinding while providing a much more durable edge than manual site-cut tiles.",
-          sideDesc: "Pre-finished units with safety features.",
-          sideSize: "Step: 1200x300mm | Riser: 1200x200mm",
-          sideThickness: "12mm Reinforced Edging",
-          sideSafety: "Bull-nose Safety Edge | Anti-Slip Grooves",
-          sideFinish: "Matte / Satin / Grooved Grip",
-          apps: [
-            { title: "Bungalows", icon: "fa-home", desc: "Premium aesthetic for home stairs." },
-            { title: "Commercial", icon: "fa-briefcase", desc: "Fast installation for offices." },
-            { title: "Hospitals", icon: "fa-medkit", desc: "High safety for public access." },
-            { title: "Hotels", icon: "fa-bed", desc: "Elegant transitions between floors." }
-          ],
-          gallery: ["img/product/stairs.jpg", "img/product/stepr.webp", "img/product/stepri.jpg"]
-        },
-        woodfinish: {
-          bannerTitle: "Classic <span style='color:#f5ca56'>Wood</span>",
-          image: "img/product/wooden.jpg",
-          title: "Natural Wood Vitrified Planks",
-          desc: "The warmth of hardwood with the maintenance-free life of tiles.",
-          intro: "Wood Finish tiles offer the authentic look of Oak, Walnut, and Pine without the worries of termites, water damage, or warping. Each plank features a unique grain pattern to mimic natural timber perfectly. These tiles are ideal for creating a cozy atmosphere in bedrooms and living rooms. Unlike real wood, these planks are fire-resistant and can be used with under-floor heating systems. Experience the organic beauty of timber with the cleaning ease of high-grade vitrified ceramics.",
-          sideDesc: "Digital wood-grain planks with HD textures.",
-          sideSize: "200x1000mm & 200x1200mm Planks",
-          sideThickness: "9mm - 10mm",
-          sideSafety: "Termite Proof | Zero Moisture Intake",
-          sideFinish: "Satin Wood / Natural Grain",
-          apps: [
-            { title: "Bedrooms", icon: "fa-bed", desc: "Warm aesthetics for private spaces." },
-            { title: "Cafes", icon: "fa-coffee", desc: "Trendy rustic look with durability." },
-            { title: "Offices", icon: "fa-building-o", desc: "Professional corporate interiors." },
-            { title: "Libraries", icon: "fa-book", desc: "Classic look with noise-reduction." }
-          ],
-          gallery: ["img/product/wooden-1.jpg", "img/product/woodn-2.jpg", "img/product/wooden-3.jpg"]
-        },
-        moroccan: {
-          bannerTitle: "Artistic <span style='color:#f5ca56'>Moroccan</span>",
-          image: "img/product/decor.jpg",
-          title: "Heritage Pattern Decor Tiles",
-          desc: "A celebration of color and geometry inspired by ancient craft.",
-          intro: "Transform your walls and floors into art with our Moroccan Series. These tiles feature vibrant geometric patterns that add character to any space. Perfect for creating focal points like kitchen backsplashes or statement bathroom floors. Each tile is finished with a satin-soft glaze that is easy to clean while maintaining a vintage, handmade feel. These high-definition prints bring Mediterranean heritage into your modern home with modern-day durability and stain resistance.",
-          sideDesc: "Decorative art tiles for accent walls.",
-          sideSize: "300x300mm / 200x200mm Formats",
-          sideThickness: "8mm - 9mm",
-          sideSafety: "HD Digital Print | Stain Resistant",
-          sideFinish: "Satin / Matte Art Finish",
-          apps: [
-            { title: "Backsplashes", icon: "fa-cutlery", desc: "Art for kitchen wall zones." },
-            { title: "Bathrooms", icon: "fa-shower", desc: "Boutique feel for shower areas." },
-            { title: "Patios", icon: "fa-sun-o", desc: "Charming Mediterranean balcony look." },
-            { title: "Entryways", icon: "fa-sign-in", desc: "Memorable first impressions." }
-          ],
-          gallery: ["img/product/decor-1.jpg", "img/product/decor-2.jpg", "img/product/decor-3.jpg"]
-        },
-        highgloss: {
-          bannerTitle: "Ultra <span style='color:#f5ca56'>Gloss</span>",
-          image: "img/product/mirror.jpg",
-          title: "Premium Mirror Finish GVT",
-          desc: "Luxury redefined with high-reflection surfaces and nano-polish.",
-          intro: "Our High Gloss series is designed for spaces that demand opulence. Featuring a 90+ gloss level, these tiles act like mirrors, reflecting light to make any room appear larger and brighter. Despite their shine, they are treated with a specialized nano-coating making them resistant to scratches and stains. Ideal for luxury living rooms and hotel lobbies where a premium, spotless, and highly reflective aesthetic is paramount for a high-end feel.",
-          sideDesc: "Nano-polished tiles with mirror-like shine.",
-          sideSize: "600x1200mm & 800x1600mm Slabs",
-          sideThickness: "9mm - 10mm High Grade",
-          sideSafety: "Nano-Shield Coating | High Clarity",
-          sideFinish: "Mirror Polished / High Gloss",
-          apps: [
-            { title: "Living Rooms", icon: "fa-television", desc: "Bright and luxurious home spaces." },
-            { title: "Showrooms", icon: "fa-shopping-cart", desc: "Reflects luxury for premium products." },
-            { title: "Lobbies", icon: "fa-building", desc: "Sophisticated entry for hotels." },
-            { title: "Ballrooms", icon: "fa-music", desc: "Seamless slabs for grand events." }
-          ],
-          gallery: ["img/product/mirror-1.jpg", "img/product/mirror-2.jpg", "img/product/mirror-03.jpg"]
-        },
-        industrial: {
-      bannerTitle: "Industrial <span style='color:#f5ca56'>Pavers</span>",
-      image: "img/product/steprise.jpg",
-      title: "High-Strength Interlocks",
-      desc: "The ultimate solution for heavy-duty traffic areas like ports, container terminals, and heavy industries.",
-      intro: "Engineered for maximum load distribution, these interlocking pavers are designed to handle 60-80 tons of weight without shifting or cracking. They provide a flexible yet indestructible surface for high-impact zones.",
-      sideDesc: "M40 to M60 Grade Concrete High-Load Pavers.",
-      sideSize: "Interlocking Geometry",
-      sideThickness: "60mm, 80mm & 100mm Options",
-      sideSafety: "60-80 Ton Load Bearing | Salt-water Resistant",
-      sideFinish: "Industrial Matte / Rough Grip",
-      apps: [
-        { title: "Sea Ports", icon: "fa-ship", desc: "Handles container stacker loads." },
-        { title: "Factories", icon: "fa-gears", desc: "Resistant to heavy machinery vibration." },
-        { title: "Truck Terminals", icon: "fa-truck", desc: "Built for constant heavy axle movement." },
-        { title: "Public Roads", icon: "fa-road", desc: "Durable alternative to asphalt." }
-      ],
-      gallery: ["img/product/stepriser1.jpg", "img/product/stepriser2.jpg", "img/product/stepriser3.jpg"]
-    },
-        swimmingPool: {
-          bannerTitle: "Aquatic <span style='color:#f5ca56'>Series</span>",
-          image: "img/product/swimming.jpg",
-          title: "Safety-First Pool & Spa Tiles",
-          desc: "Water-repellent and chemical-resistant tiles for pools.",
-          intro: "Dive into safety. Our Swimming Pool tiles are specifically designed to withstand prolonged exposure to chlorine and pool chemicals without losing color. The surface features an anti-slip texture effective even under water, ensuring safety for all. From oceanic blues to turquoise, create stunning underwater gradients that turn any pool into a luxury resort feature with zero water absorption and high durability.",
-          sideDesc: "Chemical-resistant tiles for aquatic areas.",
-          sideSize: "Mosaic / 100x100mm / 200x200mm",
-          sideThickness: "8mm - 10mm Profile",
-          sideSafety: "R11 Anti-Slip | Chlorine Resistant",
-          sideFinish: "Anti-Slip Glossy / Mosaic Texture",
-          apps: [
-            { title: "Pool Floors", icon: "fa-tint", desc: "Safe anti-slip surface for all depths." },
-            { title: "Jacuzzis", icon: "fa-hot-tub", desc: "Heat and chemical resistant." },
-            { title: "Water Features", icon: "fa-fountain", desc: "Ideal for decorative ponds." },
-            { title: "Public Pools", icon: "fa-life-ring", desc: "Highly durable for heavy daily use." }
-          ],
-          gallery: ["img/product/swimming-1.jpg", "img/product/swimming-2.jpg", "img/product/swimming-3.jpg"]
-        }
+      { title: "Corporate Offices", icon: "fa-briefcase", desc: "Modern and professional look for lobbies." }
+    ],
+    gallery: ["img/product/grano1.png", "img/product/grano2.png", "img/product/grano3.png"]
+  },
+   outdoor: {
+    bannerTitle: "Outdoor <span style='color:#f5ca56'>Series</span>",
+    image: "img/product/outdoortiles.png",
+      title: "Outdoor Exterior Tiles",
+     desc: "Outdoor tiles are specially designed to withstand harsh weather conditions, UV rays, and heavy rainfall. With deep textured surfaces, they provide excellent grip and safety for gardens, patios, and walkways. These tiles maintain color stability and durability for long-term exterior use.",
+     intro: "Specifically engineered to withstand harsh weather, UV rays, and moisture. Our Outdoor Series features deep-punch textures providing exceptional grip, making them the safest choice for wet exterior areas like garden walkways and swimming pool decks.",
+    sideDesc: "Weatherproof tiles for gardens and patios.",
+    sideSize: "400x400mm Format",
+    sideThickness: "10mm - 12mm Deep Punch",
+    sideSafety: "Anti-Slip R12 Texture | UV Stable Pigments",
+    sideFinish: "Stone, Rock, and Slate Rustic Finishes",
+    apps: [
+      { title: "Gardens", icon: "fa-leaf", desc: "Textured finishes that blend with nature." },
+      { title: "Walkways", icon: "fa-map-signs", desc: "Safe, slip-free paths in all weather." },
+      { title: "Pool Sides", icon: "fa-life-ring", desc: "High-grip even in wet pool areas." },
+      { title: "Open Patios", icon: "fa-coffee", desc: "Durable lounge space that is easy to wash." }
+    ],
+    gallery: ["img/product/ot1.png", "img/product/ot2.png", "img/product/ot3.png"]
+  },
+       fullbody: {
+    bannerTitle: "Full Body <span style='color:#f5ca56'>Vitrified</span>",
+    image: "img/product/full-body-tiles.png",
+   title: "Full Body Vitrified Tiles",
+   desc: "Full body vitrified tiles feature uniform color throughout the tile body, ensuring no visible wear even after years of heavy use. They are highly resistant to abrasion, chemicals, and stains, making them ideal for malls, factories, and high-traffic commercial areas.",
+    intro: "Full Body tiles are the ultimate choice for high-traffic environments like airports, malls, and industrial kitchens. Unlike glazed tiles, the color and pattern run through the entire thickness of the tile. This means even if the surface is chipped or worn down over years of heavy use, the appearance remains unchanged. These tiles are fired at exceptionally high temperatures, resulting in a rock-solid material that is resistant to acids, chemicals, and extreme abrasion. It is a one-time investment for a lifetime of service in the most demanding environments.",
+    sideDesc: "Technical tiles with uniform color throughout.",
+    sideSize: "600x600mm | 600x1200mm",
+    sideThickness: "10mm - 12mm High Density",
+    sideSafety: "Acid Resistant | Zero Abrasion",
+    sideFinish: "Technical Matte / Anti-Slip",
+    apps: [
+      { title: "Factories", icon: "fa-cogs", desc: "Vibration and impact resistant." },
+      { title: "Kitchens", icon: "fa-cutlery", desc: "Hygienic and highly stain resistant." },
+      { title: "Malls", icon: "fa-shopping-bag", desc: "Handles high daily foot traffic." },
+      { title: "Showrooms", icon: "fa-eye", desc: "Professional look, industrial strength." }
+    ],
+    gallery: ["img/product/fb1.jpg", "img/product/fb2.jpg", "img/product/fb3.jpg"]
+  },
+       landscape: {
+  bannerTitle: "Landscape <span style='color:#f5ca56'>Special</span>",
+  image: "img/product/outdoortiles2.png",
+  title: "Landscape & Exterior Tiles",
+   desc: "Landscape tiles are designed for outdoor architecture with natural stone-inspired textures. They offer high traction, UV resistance, and moisture resistance, making them perfect for gardens, balconies, and outdoor decks. These tiles enhance outdoor spaces with durability and aesthetic appeal.",
+   intro: "Bring nature to your doorstep with our Landscape & Exterior series. These tiles replicate the organic feel of natural stone and rustic minerals while offering the superior performance of vitrified material. Equipped with a high-friction surface, they ensure safety in porches, garden walkways, and balconies. They are resistant to moss growth, fading under direct sunlight (UV stable), and are incredibly easy to clean compared to natural stone. Elevate your exterior architecture with surfaces that are beautiful, tough, and weather-resilient.",
+  sideDesc: "Weather-resistant tiles with natural textures.",
+  sideSize: "Multi-size Formats for Patterns",
+  sideThickness: "10mm to 12mm",
+  sideSafety: "High Traction | UV Proof | Moss Resistant",
+  sideFinish: "Natural Mineral / Rustic Grit",
+  apps: [
+    { title: "Gardens", icon: "fa-leaf", desc: "Pathways and decorative borders." },
+    { title: "Porches", icon: "fa-columns", desc: "Safe and grand entry points." },
+    { title: "Swimming Decks", icon: "fa-tint", desc: "Slip-resistant wet outdoor zones." },
+    { title: "Plazas", icon: "fa-users", desc: "Durable for public gathering areas." }
+  ],
+  gallery: ["img/product/et1.png", "img/product/et2.png", "img/product/et3.png"]
+},
+       stepriser: {
+    bannerTitle: "Ready <span style='color:#f5ca56'>Steps</span>",
+    image: "img/product/step.webp",
+    title: "Step & Riser Staircase Tiles",
+    desc: "Step and riser tiles are factory-finished staircase solutions with bull-nosed edges and anti-slip grooves. They provide a clean, professional finish with enhanced safety. These tiles reduce installation time and ensure uniform design for residential and commercial staircases.",
+    intro: "Our Step & Riser collection is a revolution in staircase design. These are ready-to-install tiles featuring factory-finished bull-nose edges for safety. The surface includes scientifically placed grooves to provide maximum grip, preventing slips. By using our pre-cut sizes, you achieve a seamless, professional look with uniform joints. Available in a variety of wood and stone finishes, they eliminate messy on-site grinding while providing a much more durable edge than manual site-cut tiles.",
+    sideDesc: "Pre-finished units with safety features.",
+    sideSize: "Step: 1200x300mm | Riser: 1200x200mm",
+    sideThickness: "12mm Reinforced Edging",
+    sideSafety: "Bull-nose Safety Edge | Anti-Slip Grooves",
+    sideFinish: "Matte / Satin / Grooved Grip",
+    apps: [
+      { title: "Bungalows", icon: "fa-home", desc: "Premium aesthetic for home stairs." },
+      { title: "Commercial", icon: "fa-briefcase", desc: "Fast installation for offices." },
+      { title: "Hospitals", icon: "fa-medkit", desc: "High safety for public access." },
+      { title: "Hotels", icon: "fa-bed", desc: "Elegant transitions between floors." }
+    ],
+    gallery: ["img/product/stairs.jpg", "img/product/stepr.webp", "img/product/stepri.jpg"]
+  },
+       woodfinish: {
+    bannerTitle: "Classic <span style='color:#f5ca56'>Wood</span>",
+    image: "img/product/wooden.jpg",
+    title: "Wood Finish Vitrified Tiles",
+    desc: "Wood finish tiles replicate the natural look of wooden planks while offering the durability of vitrified tiles. They are resistant to water, termites, and scratches, making them ideal for bedrooms, living rooms, and offices. These tiles provide a warm aesthetic with easy maintenance.",
+    intro: "Wood Finish tiles offer the authentic look of Oak, Walnut, and Pine without the worries of termites, water damage, or warping. Each plank features a unique grain pattern to mimic natural timber perfectly. These tiles are ideal for creating a cozy atmosphere in bedrooms and living rooms. Unlike real wood, these planks are fire-resistant and can be used with under-floor heating systems. Experience the organic beauty of timber with the cleaning ease of high-grade vitrified ceramics.",
+    sideDesc: "Digital wood-grain planks with HD textures.",
+    sideSize: "200x1000mm & 200x1200mm Planks",
+    sideThickness: "9mm - 10mm",
+    sideSafety: "Termite Proof | Zero Moisture Intake",
+    sideFinish: "Satin Wood / Natural Grain",
+    apps: [
+      { title: "Bedrooms", icon: "fa-bed", desc: "Warm aesthetics for private spaces." },
+      { title: "Cafes", icon: "fa-coffee", desc: "Trendy rustic look with durability." },
+      { title: "Offices", icon: "fa-building-o", desc: "Professional corporate interiors." },
+      { title: "Libraries", icon: "fa-book", desc: "Classic look with noise-reduction." }
+    ],
+    gallery: ["img/product/wooden-1.jpg", "img/product/woodn-2.jpg", "img/product/wooden-3.jpg"]
+  },
+       moroccan: {
+    bannerTitle: "Artistic <span style='color:#f5ca56'>Moroccan</span>",
+    image: "img/product/decor.jpg",
+    title: "Moroccan Decor Pattern Tiles",
+    desc: "Moroccan decor tiles feature artistic geometric patterns inspired by traditional craftsmanship. They are ideal for accent walls, kitchens, bathrooms, and decorative floors. These tiles add character and elegance while maintaining durability, stain resistance, and easy cleaning.",
+    intro: "Transform your walls and floors into art with our Moroccan Series. These tiles feature vibrant geometric patterns that add character to any space. Perfect for creating focal points like kitchen backsplashes or statement bathroom floors. Each tile is finished with a satin-soft glaze that is easy to clean while maintaining a vintage, handmade feel. These high-definition prints bring Mediterranean heritage into your modern home with modern-day durability and stain resistance.",
+    sideDesc: "Decorative art tiles for accent walls.",
+    sideSize: "300x300mm / 200x200mm Formats",
+    sideThickness: "8mm - 9mm",
+    sideSafety: "HD Digital Print | Stain Resistant",
+    sideFinish: "Satin / Matte Art Finish",
+    apps: [
+      { title: "Backsplashes", icon: "fa-cutlery", desc: "Art for kitchen wall zones." },
+      { title: "Bathrooms", icon: "fa-shower", desc: "Boutique feel for shower areas." },
+      { title: "Patios", icon: "fa-sun-o", desc: "Charming Mediterranean balcony look." },
+      { title: "Entryways", icon: "fa-sign-in", desc: "Memorable first impressions." }
+    ],
+    gallery: ["img/product/decor-1.jpg", "img/product/decor-2.jpg", "img/product/decor-3.jpg"]
+  },
+       highgloss: {
+    bannerTitle: "Ultra <span style='color:#f5ca56'>Gloss</span>",
+    image: "img/product/mirror.jpg",
+   title: "High Gloss Mirror Finish Tiles",
+    desc: "High gloss tiles offer a luxurious mirror-like surface that reflects light and enhances space brightness. They are nano-polished for scratch and stain resistance, making them ideal for premium interiors, showrooms, and hotel lobbies. These tiles create a modern and elegant ambiance.",
+    intro: "Our High Gloss series is designed for spaces that demand opulence. Featuring a 90+ gloss level, these tiles act like mirrors, reflecting light to make any room appear larger and brighter. Despite their shine, they are treated with a specialized nano-coating making them resistant to scratches and stains. Ideal for luxury living rooms and hotel lobbies where a premium, spotless, and highly reflective aesthetic is paramount for a high-end feel.",
+    sideDesc: "Nano-polished tiles with mirror-like shine.",
+    sideSize: "600x1200mm & 800x1600mm Slabs",
+    sideThickness: "9mm - 10mm High Grade",
+    sideSafety: "Nano-Shield Coating | High Clarity",
+    sideFinish: "Mirror Polished / High Gloss",
+    apps: [
+      { title: "Living Rooms", icon: "fa-television", desc: "Bright and luxurious home spaces." },
+      { title: "Showrooms", icon: "fa-shopping-cart", desc: "Reflects luxury for premium products." },
+      { title: "Lobbies", icon: "fa-building", desc: "Sophisticated entry for hotels." },
+      { title: "Ballrooms", icon: "fa-music", desc: "Seamless slabs for grand events." }
+    ],
+    gallery: ["img/product/mirror-1.jpg", "img/product/mirror-2.jpg", "img/product/mirror-03.jpg"]
+  },
+  industrial: {
+    bannerTitle: "Industrial <span style='color:#f5ca56'>Pavers</span>",
+    image: "img/product/steprise.jpg",
+    title: "Industrial Interlocking Pavers",
+    desc: "Industrial pavers are high-strength concrete tiles designed for heavy-load applications such as ports, factories, and truck terminals. They provide excellent load distribution, durability, and resistance to extreme weather and chemicals, ensuring long-lasting performance in harsh industrial environments.",
+    intro: "Industrial Interlocking Pavers are engineered for the most demanding load-bearing applications. Manufactured using M40 to M60 grade high-density concrete, these pavers are designed to withstand massive axle loads from trucks, forklifts, and heavy machinery. The interlocking geometry ensures uniform load distribution and prevents surface deformation, cracking, and settlement over time. Their rough anti-slip surface provides excellent traction even in wet, oily, and dusty environments. Resistant to saltwater, chemicals, and temperature fluctuations, these pavers are ideal for ports, warehouses, industrial yards, and highways.",
+    sideDesc: "M40 to M60 Grade Concrete High-Load Pavers.",
+    sideSize: "Interlocking Geometry",
+    sideThickness: "60mm, 80mm & 100mm Options",
+    sideSafety: "60-80 Ton Load Bearing | Salt-water Resistant",
+    sideFinish: "Industrial Matte / Rough Grip",
+    apps: [
+      { title: "Sea Ports", icon: "fa-ship", desc: "Handles container stacker loads." },
+      { title: "Factories", icon: "fa-gears", desc: "Resistant to heavy machinery vibration." },
+      { title: "Truck Terminals", icon: "fa-truck", desc: "Built for constant heavy axle movement." },
+      { title: "Public Roads", icon: "fa-road", desc: "Durable alternative to asphalt." }
+    ],
+    gallery: ["img/product/stepriser1.jpg", "img/product/stepriser2.jpg", "img/product/stepriser3.jpg"]
+  },
+      swimmingPool: {
+    bannerTitle: "Aquatic <span style='color:#f5ca56'>Series</span>",
+    image: "img/product/swimming.jpg",
+   title: "Swimming Pool & Spa Tiles",
+   desc: "Swimming pool tiles are designed to resist chemicals, water absorption, and fading. They feature anti-slip surfaces for safety in wet areas and are available in vibrant colors for aesthetic pool designs. These tiles are ideal for pools, spas, and water features.",
+  intro: "Dive into safety. Our Swimming Pool tiles are specifically designed to withstand prolonged exposure to chlorine and pool chemicals without losing color. The surface features an anti-slip texture effective even under water, ensuring safety for all. From oceanic blues to turquoise, create stunning underwater gradients that turn any pool into a luxury resort feature with zero water absorption and high durability.",
+    sideDesc: "Chemical-resistant tiles for aquatic areas.",
+    sideSize: "Mosaic / 100x100mm / 200x200mm",
+    sideThickness: "8mm - 10mm Profile",
+    sideSafety: "R11 Anti-Slip | Chlorine Resistant",
+    sideFinish: "Anti-Slip Glossy / Mosaic Texture",
+    apps: [
+      { title: "Pool Floors", icon: "fa-tint", desc: "Safe anti-slip surface for all depths." },
+      { title: "Jacuzzis", icon: "fa-hot-tub", desc: "Heat and chemical resistant." },
+      { title: "Water Features", icon: "fa-fire", desc: "Ideal for decorative ponds." },
+      { title: "Public Pools", icon: "fa-life-ring", desc: "Highly durable for heavy daily use." }
+    ],
+    gallery: ["img/product/swimming-1.jpg", "img/product/swimming-2.jpg", "img/product/swimming-3.jpg"]
+  }
       };
 
       // INITIALIZATION LOGIC
@@ -644,8 +659,7 @@ body {
         document.getElementById("sideSize").innerText = product.sideSize;
         document.getElementById("sideThickness").innerText = product.sideThickness;
         document.getElementById("sideSafety").innerText = product.sideSafety;
-        document.getElementById("sideFinish").innerText = product.sideFinish;
-
+       
         // Apps Injection
         const appContainer = document.getElementById("appContent");
         product.apps.forEach((app) => {
@@ -689,84 +703,85 @@ body {
       }
     </script>
     <!--================ start footer Area  =================-->
-    <footer class="footer_area omega_footer section_gap">
+    <footer class="footer_area">
       <div class="container">
-        <div class="row footer_inner">
-          <div class="col-lg-3 col-sm-6">
+        <div class="row footer_inner gy-4">
+          <!-- ABOUT -->
+          <div class="col-lg-3 col-md-6">
             <aside class="f_widget ab_widget">
               <div class="f_title">
-                <h3>Omega</h3>
+                <h3>Omega Surface</h3>
               </div>
               <p>
                 Omega provides top-tier creative solutions and innovative growth
                 strategies.
               </p>
-              <p class="copyright">
-                Copyright @2026 &copy;
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                OmegaSurface|Developed by paletteproduction
-              </p>
             </aside>
           </div>
 
-          <div class="col-lg-2 col-sm-6">
+          <!-- ADDRESS -->
+          <div class="col-lg-3 col-md-6">
+            <aside class="f_widget link_widget">
+              <div class="f_title">
+                <h3>Contact</h3>
+              </div>
+              <ul class="list">
+                <li>
+                  Tulasi Tiles 74/1, Coimbatore By Pass Road, Velayuthampalayam,
+                  Avinashi, Tamil Nadu 641654
+                </li>
+                <li>tulasitiles@gmail.com</li>
+                <li>+91 98430 69220</li>
+              </ul>
+            </aside>
+          </div>
+
+          <!-- QUICK LINKS -->
+          <div class="col-lg-3 col-md-6">
             <aside class="f_widget link_widget">
               <div class="f_title">
                 <h3>Quick Links</h3>
               </div>
               <ul class="list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="project.html">Product</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
             </aside>
           </div>
 
-          <div class="col-lg-4 col-sm-6">
-            <aside class="f_widget gallery_widget">
-              <div class="f_title">
-                <h3>Gallery</h3>
-              </div>
-              <div class="insta_feed">
-                <div class="gallery_item">
-                  <img src="./img/about-4.png" alt="Gallery 1" />
-                </div>
-                <div class="gallery_item">
-                  <img src="img/about-7.png" alt="Gallery 2" />
-                </div>
-                <div class="gallery_item">
-                  <img src="img/about-3.png" alt="Gallery 3" />
-                </div>
-                <div class="gallery_item">
-                  <img src="img/about-2.png" alt="Gallery 4" />
-                </div>
-              </div>
-            </aside>
-          </div>
-
-          <div class="col-lg-3">
+          <!-- SOCIAL -->
+          <div class="col-lg-3 col-md-6">
             <aside class="f_widget social_widget">
               <div class="f_title">
                 <h3>Follow Us</h3>
               </div>
-              <ul class="list social_icons">
+
+              <ul class="social_icons">
                 <li>
-                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 </li>
               </ul>
             </aside>
+
+            <p class="copyright">
+              ©
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              OmegaSurface | Developed by paletteproduction
+            </p>
           </div>
         </div>
       </div>
