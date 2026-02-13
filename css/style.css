@@ -1387,14 +1387,14 @@ button:hover {
 .os-gallery-section {
   background-color: #ffffff;
   margin-top: 10px;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   margin-bottom: 60px;
 }
 
 .os-gallery-main-header {
   text-align: center;
-  margin-top: 0;
-  padding-top: 0;
+  margin-bottom:20px;
+ 
 }
 
 .os-gallery-title {
@@ -1753,12 +1753,12 @@ button:hover {
 }
 
 .custom-input:focus {
-  border-color: #4a86bc;
+  border-color: #f4b41a;
   box-shadow: none;
 }
 
 .send-btn {
-  background: #4a86bc; /* Your specific blue */
+  background: #f4b41a; 
   border: none;
   padding: 12px;
   font-weight: 700;
@@ -1768,7 +1768,7 @@ button:hover {
 }
 
 .send-btn:hover {
-  background: #36638a;
+  background: #f4b41a;
 }
 
 /* Mobile Responsive */
